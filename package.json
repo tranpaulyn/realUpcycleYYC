@@ -6,9 +6,13 @@
   "directories": {
     "lib": "lib"
   },
+  "engines": {
+    "node": "11.13.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm run build"
+    "build": "cd client && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
   },
   "author": "",
   "license": "ISC"
