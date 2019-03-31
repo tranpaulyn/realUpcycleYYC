@@ -1,0 +1,2 @@
+class WasteItem < ApplicationRecord
+end
