@@ -26,7 +26,9 @@ class WasteList extends Component {
                 {this.state.waste_items.map( item => {
                    return (
                        <div className="single-list">
-                        <p>{item.id} {item.name} {item.type_of_waste} {item.compostable} {item.points}  {item.weight} KG {item.instructions}</p>
+                        <p><strong>Item: </strong>{item.name} </p>
+                        <p><strong>Type: </strong>{item.type_of_waste} </p>
+                        <p><strong>Special Instructions: </strong> {item.instructions}</p>
                         </div>
                    )
                 })}
