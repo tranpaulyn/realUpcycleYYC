@@ -4,7 +4,7 @@ import { Progress } from 'antd';
 class Signup extends Component {
   state = {
     email:'',
-    ward:'',
+    ward: '',
     name:'',
     progress: 0
 }
@@ -18,14 +18,34 @@ handleSubmit = (e) => {
     console.log(this.state)
 }
 handleBlur = (e) => {
-  if(e.target.id === "name") {
-    this.setState({progress: (this.state.progress + 33.33)})
-  } if(e.target.id === "email") {
-    this.setState({progress: (this.state.progress + 33.33)})
-  } if(e.target.id === "ward") {
-    this.setState({progress: (this.state.progress + 35.36)})
-  }
+  console.log(this.state)
+  var progress = 0  
+  if(this.state.name !== ''){
+      progress += 35
+    } if(this.state.email !== ''){
+      progress += 35
+    } if(e.target.value === 'ward1'){
+      progress += 35
+    }
+    this.setState({progress: progress})
+  // if(e.target.id === "name") {
+  //   this.setState({progress: (this.state.progress + 33.33)})
+  // } if(e.target.id === "email") {
+  //   this.setState({progress: (this.state.progress + 33.33)})
+  // } if(e.target.id === "ward") {
+  //   this.setState({progress: (this.state.progress + 35.36)})
+  // } if(e.target.id === "chooseward" && e.target.value === "" && this.state.progress >= 0) {
+  //   this.setState({progress: (this.state.progress - 33.33)})
+  // }if(e.target.id === "name" && e.target.value === "" && this.state.progress >= 0) {
+  //   this.setState({progress: (this.state.progress - 33.33)})
+  // }if(e.target.id === "email" && e.target.value === "" && this.state.progress >= 0) {
+  //   this.setState({progress: (this.state.progress - 33.33)})
+  // } if(this.state.progress === true && this.state.progress === false && this.state.progress < 0){
+  //   this.setState({progress: 0})
+  // }
 }
+// Ask question of: how do i access an input only once if i type something once the bar should go up once
+// if else the input text box is empty then remove only 33% once only
   render() {
     return (
       <div className="App">
@@ -48,19 +68,20 @@ handleBlur = (e) => {
                     <div className="dd-wrapper">
                     <label htmlFor='ward'>Ward</label>
                         <select onChange={this.handleBlur} className='input-wrapper' type='ward' id='ward'>
-                          <option>Ward 1</option>
-                          <option>Ward 2</option>
-                          <option>Ward 3</option>
-                          <option>Ward 4</option>
-                          <option>Ward 6</option>
-                          <option>Ward 7</option>
-                          <option>Ward 8</option>
-                          <option>Ward 9</option>
-                          <option>Ward 10</option>
-                          <option>Ward 11</option>
-                          <option>Ward 12</option>
-                          <option>Ward 13</option>
-                          <option>Ward 14</option>
+                          <option value='chooseward' className="chooseward">Choose Ward</option>                         
+                          <option value='ward1'>Ward 1</option>
+                          <option value='ward1'>Ward 2</option>
+                          <option value='ward1'>Ward 3</option>
+                          <option value='ward1'>Ward 4</option>
+                          <option value='ward1'>Ward 6</option>
+                          <option value='ward1'>Ward 7</option>
+                          <option value='ward1'>Ward 8</option>
+                          <option value='ward1'>Ward 9</option>
+                          <option value='ward1'>Ward 10</option>
+                          <option value='ward1'>Ward 11</option>
+                          <option value='ward1'>Ward 12</option>
+                          <option value='ward1'>Ward 13</option>
+                          <option value='ward1'>Ward 14</option>
                         </select>
                         Find your ward <a target='_blank' rel='noopener noreferrer' href='http://www.calgary.ca/citycouncil/Pages/FindYourCouncillor.aspx'>here</a>
                     </div>
