@@ -26,7 +26,7 @@ class UserList extends Component {
                 {this.state.users.map( user => {
                    return (
                        <div className="single-list">
-                        <p>{user.id} {user.name} {user.points} {user.ward_id} {user.waste_diverted} KG</p>
+                        <p>{user.level} {user.badge} {user.award} {user.name} {user.points} {user.ward_id} {user.waste_diverted} KG</p>
                         </div>
                    )
                 })}
