@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -33,6 +34,19 @@
   font-weight: bold;
   font-size: 32pt;
   outline: none;
+  color: black;
+}
+
+.text-name, select, textarea{
+  color: black;
+}
+
+.text-email, select, textarea{
+  color: black;
+}
+
+.input-wrapper, select, textarea{
+  color: black;
 }
 
 .signuplink:hover{
@@ -42,6 +56,76 @@
   background: #F7F7F7;
 }
 
+button.Recycle{
+  width: 100%;
+  background-color: #cccccc;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+button.Recycle:hover{
+  background-color:#ddd;
+}
+
+.Recycle-content{
+  padding: 0 20px;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  max-height: 0;
+  overflow: hidden;
+}
+
+button.Compost{
+  width: 100%;
+  background-color: #cccccc;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+button.Compost:hover{
+  background-color:#ddd;
+}
+.Compost-content{
+  padding: 0 20px;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  max-height: 0;
+  overflow: hidden;
+}
+
+button.Garbage{
+  width: 100%;
+  background-color: #cccccc;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+button.Garbage:hover{
+  background-color:#ddd;
+}
+
+.Garbage-content{
+  padding: 0 20px;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  max-height: 0;
+  overflow: hidden;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

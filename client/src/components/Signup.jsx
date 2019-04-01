@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import Link from 'react-router-dom';
+import { Progress } from 'antd';
 
 class Signup extends Component {
   state = {
     email:'',
     ward:'',
-    name:''
+    name:'',
+    progress: 0
 }
 handleChange = (e) => {
     this.setState({
@@ -16,26 +17,37 @@ handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state)
 }
+handleBlur = (e) => {
+  if(e.target.id === "name") {
+    this.setState({progress: (this.state.progress + 33.33)})
+  } if(e.target.id === "email") {
+    this.setState({progress: (this.state.progress + 33.33)})
+  } if(e.target.id === "ward") {
+    this.setState({progress: (this.state.progress + 35.36)})
+  }
+}
   render() {
     return (
       <div className="App">
         <header className="App-header">
+    <Progress percent={this.state.progress} showInfo={false} />
           <h1 className="App-title">Hi!</h1>
           <h2 className="App-title">Let's start with the basics!</h2>
           <div>
                 <div className='container'>
                 <form  className='white' action='/dashboard' method='get'>
-                    <div className="input-field">
+                    <div className="input-name">
                         <label htmlFor='name'>Name</label>
-                        <input type='name' id='name' onChange={this.handleChange}></input>
+                        <input className='text-name' type='name' onBlur={this.handleBlur} id='name' onChange={this.handleChange}></input>
                     </div>
-                    <div className="input-field">
+
+                    <div className="input-email">
                         <label htmlFor='email'>Email</label>
-                        <input type='email' id='email' onChange={this.handleChange}></input>
+                        <input onBlur={this.handleBlur} className='text-email' type='email' id='email' onChange={this.handleChange}></input>
                     </div>
                     <div className="dd-wrapper">
                     <label htmlFor='ward'>Ward</label>
-                        <select type='ward' id='ward' onChange={this.handleChange}>
+                        <select onChange={this.handleBlur} className='input-wrapper' type='ward' id='ward'>
                           <option>Ward 1</option>
                           <option>Ward 2</option>
                           <option>Ward 3</option>
