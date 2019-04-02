@@ -5,7 +5,14 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :items
       resources :lists
+      resources :user_waste_items
+      resources :waste_items
+      resources :users
+      resources :wards
     end
 end
+
+root 'pages#index'
+match '*path', to: 'pages#index', via: :all
 
 end

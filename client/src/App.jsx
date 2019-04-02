@@ -5,6 +5,8 @@ import Home from './components/Home.jsx';
 import Signup from './components/Signup.jsx';
 import Add from './components/Add_item.jsx';
 import Dashboard from './components/Dashboard.jsx';
+import Learn from './components/Learn.jsx';
+import Dummy from './components/Dummy.jsx';
 
 class App extends Component {
   render() {
@@ -15,6 +17,8 @@ class App extends Component {
   <Route exact path="/signup" component={Signup} />
   <Route exact path="/add" component={Add} />
   <Route exact path="/dashboard" component={Dashboard} />
+  <Route exact path="/Learn" component={Learn} />
+  <Route exact path="/dummy" component={Dummy} />
 </Switch>
       </div>
     );
