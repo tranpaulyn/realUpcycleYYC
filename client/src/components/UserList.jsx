@@ -40,10 +40,10 @@ class UserList extends Component {
     render() {
         return (
             <div className="lists-container">
-            {this.state.userWasteItems.map( item => {
+            {this.state.users.map( user => {
                return (
                    <div className="single-list">
-                    {item.id} {item.user_id} {item.waste_item_id}
+                    {user.id} {user.name} {user.points}
                     </div>
                )
             })}
