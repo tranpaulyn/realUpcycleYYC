@@ -32,9 +32,7 @@ class Add extends Component {
     axios.post('api/v1/user_waste_items', { user_waste_item: { waste_item_id }})
         .then(items => {
             console.log(items)
-            // this.setState({
-            //     waste_items: items.data
-            // })
+            window.location.replace("/dashboard")
         })
         .catch(error => console.log(error))
   }
