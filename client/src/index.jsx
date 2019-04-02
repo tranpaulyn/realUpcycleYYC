@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import "antd/dist/antd.css";
+// import '../node_modules/font-awesome/css/font-awesome.min.css';
+
 
 ReactDOM.render(
 <Router>
