@@ -21,10 +21,9 @@ module Api::V1
     @user_waste_item = UserWasteItem.new(user: current_user, waste_item_id: params["user_waste_item"]["waste_item_id"])
 
     if @user_waste_item.save
-      p "Points from item: #{@user_waste_item.points}"
       @user.points += @user_waste_item.points
+      @user.waste_diverted += @user_waste_item.weight
       @user.save
-      p @user.points
       render json: @user_waste_item, status: :created
 
     else
