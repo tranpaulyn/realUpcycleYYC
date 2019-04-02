@@ -1,6 +1,6 @@
 module Api::V1
-class UserWasteItemsController < ApplicationController
-  before_action :set_user_waste_item, only: [:show, :update, :destroy]
+  class UserWasteItemsController < ApplicationController
+  # before_action :set_user_waste_item, only: [:show, :update, :destroy]
 
   # GET /user_waste_items
   def index
@@ -16,10 +16,10 @@ class UserWasteItemsController < ApplicationController
 
   # POST /user_waste_items
   def create
-    @user_waste_item = UserWasteItem.new(user_waste_item_params)
+    @user_waste_item = UserWasteItem.new(user: current_user, waste_item_id: params["user_waste_item"]["waste_item_id"])
 
     if @user_waste_item.save
-      render json: @user_waste_item, status: :created, location: @user_waste_item
+      render json: @user_waste_item, status: :created
     else
       render json: @user_waste_item.errors, status: :unprocessable_entity
     end
@@ -47,7 +47,7 @@ class UserWasteItemsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_waste_item_params
-      params.require(:user_waste_item).permit(:user_id, :waste_item_id)
+      params.require(:user_waste_item).permit(:waste_item_id)
     end
 end
 end

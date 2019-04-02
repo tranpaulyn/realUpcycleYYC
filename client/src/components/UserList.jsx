@@ -6,15 +6,32 @@ class UserList extends Component {
         super(props)
         this.state = {
             users: [],
+            userWasteItems: [],
+            wasteItems: []
         }
     }
 
     componentDidMount() {
         axios.get('api/v1/users')
         .then(users => {
-            console.log(users)
             this.setState({
                 users: users.data
+            })
+        })
+        .catch(error => console.log(error))
+
+        axios.get('api/v1/user_waste_items')
+        .then(items => {
+            this.setState({
+                userWasteItems: items.data
+            })
+        })
+        .catch(error => console.log(error))
+
+        axios.get('api/v1/waste_items')
+        .then(items => {
+            this.setState({
+                wasteItems: items.data
             })
         })
         .catch(error => console.log(error))
@@ -23,14 +40,15 @@ class UserList extends Component {
     render() {
         return (
             <div className="lists-container">
-                {this.state.users.map( user => {
-                   return (
-                       <div className="single-list">
-                        <p>{user.level} {user.badge} {user.award} {user.name} {user.points} {user.ward_id} {user.waste_diverted} KG</p>
-                        </div>
-                   )
-                })}
+            {this.state.userWasteItems.map( item => {
+               return (
+                   <div className="single-list">
+                    {item.id} {item.user_id} {item.waste_item_id}
+                    </div>
+               )
+            })}
             </div>
+            
         )
     }
 }

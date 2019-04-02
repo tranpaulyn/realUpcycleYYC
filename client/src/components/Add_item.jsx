@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import { Button, Input } from 'antd';
+import "antd/dist/antd.css";
 
 class Add extends Component {
   constructor() {
@@ -26,6 +28,17 @@ class Add extends Component {
     this.setState({search: event.target.value})
   }
 
+  addWasteItem(waste_item_id){
+    axios.post('api/v1/user_waste_items', { user_waste_item: { waste_item_id }})
+        .then(items => {
+            console.log(items)
+            // this.setState({
+            //     waste_items: items.data
+            // })
+        })
+        .catch(error => console.log(error))
+  }
+
   render() {
   let filteredItems = this.state.waste_items.filter(
     (item) => {
@@ -36,7 +49,7 @@ class Add extends Component {
       <div className="App">
         <header className="App-header">
         <h2> Search an Item </h2>
-          <input type="text" value={this.state.search} onChange={this.updateSearch.bind(this)} />
+          <Input placeholder="Search Items" type="text" value={this.state.search} onChange={this.updateSearch.bind(this)} />
         </header>
 
         <div className="lists-container">
@@ -46,7 +59,8 @@ class Add extends Component {
                         <p><strong>Item: </strong>{item.name} </p>
                         <p><strong>Type: </strong>{item.type_of_waste} </p>
                         <p><strong>Special Instructions: </strong> {item.instructions}</p>
-                        </div>
+                        <p><Button type="primary" onClick={() => this.addWasteItem(item.id)}>Add</Button></p>
+                      </div>
                    )
                 })}
             </div>

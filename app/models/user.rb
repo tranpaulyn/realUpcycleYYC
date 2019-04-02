@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   belongs_to :ward
+  has_many :user_waste_items
+
 
   def level
     if self.points > 0 && self.points <= 999

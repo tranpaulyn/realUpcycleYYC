@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     user = []
 
     @users.each do | u | 
-      user.push ({ name: u.name, badge: u.badge, award: u.award, level: u.level, email: u.email, points: u.points, ward: u.ward_id, waste_diverted: u.waste_diverted })
+      user.push ({name: u.name, badge: u.badge, award: u.award, level: u.level, email: u.email, points: u.points, ward: u.ward_id, waste_diverted: u.waste_diverted })
     end
 
     render json: user
