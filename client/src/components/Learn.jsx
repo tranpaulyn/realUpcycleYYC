@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Collapse, Icon, Select } from 'antd';
-import Popup from "reactjs-popup";
 class Home extends Component {
   render() {
 
@@ -10,9 +9,7 @@ class Home extends Component {
           <h1 className="App-title">This is the Learn route!</h1>
         </header>
         <div>
-        <Popup trigger={<button> Tip of the DAY</button>} position="right center">
-    <div>Coolguy69 was here</div>
-  </Popup>
+
         </div>
       </div>
     );
