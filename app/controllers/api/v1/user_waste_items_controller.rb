@@ -21,8 +21,10 @@ module Api::V1
     @user_waste_item = UserWasteItem.new(user: current_user, waste_item_id: params["user_waste_item"]["waste_item_id"])
 
     if @user_waste_item.save
-      p @user_waste_item.points
+      p "Points from item: #{@user_waste_item.points}"
       @user.points += @user_waste_item.points
+      @user.save
+      p @user.points
       render json: @user_waste_item, status: :created
 
     else
@@ -51,7 +53,7 @@ module Api::V1
     end
 
     def load_user
-      @user = User.find(params[:user_id])
+      @user = User.find(1)
     end
 
     # Only allow a trusted parameter "white list" through.
