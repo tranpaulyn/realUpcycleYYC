@@ -7,7 +7,7 @@ class Home extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Hello THis info is from our DB</h1>
+          <h1 className="App-title">Hello This info is from our DB</h1>
         </header>
         <UserList />
         <WasteList />
