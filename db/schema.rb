@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_30_080740) do
+ActiveRecord::Schema.define(version: 2019_03_31_065109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,48 @@ ActiveRecord::Schema.define(version: 2019_03_30_080740) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_waste_items", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "waste_item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_waste_items_on_user_id"
+    t.index ["waste_item_id"], name: "index_user_waste_items_on_waste_item_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.integer "points"
+    t.bigint "ward_id"
+    t.decimal "waste_diverted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ward_id"], name: "index_users_on_ward_id"
+  end
+
+  create_table "wards", force: :cascade do |t|
+    t.integer "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "waste_items", force: :cascade do |t|
+    t.string "name"
+    t.string "type_of_waste"
+    t.boolean "compostable"
+    t.boolean "recyclable"
+    t.boolean "garbage"
+    t.integer "points"
+    t.decimal "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "instructions"
+  end
+
   add_foreign_key "list_items", "items"
   add_foreign_key "list_items", "lists"
+  add_foreign_key "user_waste_items", "users"
+  add_foreign_key "user_waste_items", "waste_items"
+  add_foreign_key "users", "wards"
 end
