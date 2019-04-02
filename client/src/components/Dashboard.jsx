@@ -1,10 +1,6 @@
-
 import React, {Component} from 'react';
 import "antd/dist/antd.css";
-import {Avatar, Progress, Alert} from 'antd';
-
-import React, { Component } from 'react';
-import { Collapse, Icon } from 'antd';
+import {Avatar, Progress, Alert, Collapse, Icon} from 'antd';
 
 const Panel = Collapse.Panel
 
@@ -70,9 +66,6 @@ class Dashboard extends Component {
               closable=""
               afterClose=""
             />
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Hello This is the Dashboard page</h1>
           <div className='container'>
           <h1>Collapseable Things</h1>
           <Collapse defaultActiveKey={['1']} onChange={callback}>
@@ -87,9 +80,8 @@ class Dashboard extends Component {
             </Panel>
           </Collapse>
         </div>
-        </header>
       </div>
-        )
+    )
   }
 }
 
