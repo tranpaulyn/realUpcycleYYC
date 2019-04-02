@@ -134,3 +134,31 @@ button.Garbage:hover{
     transform: rotate(360deg);
   }
 }
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-pic {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.diversion-statement {
+  margin-bottom: 20px;
+}
+
+.progress-bars {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
