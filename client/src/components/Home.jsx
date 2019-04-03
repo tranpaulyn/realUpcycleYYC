@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from 'antd';
+import './components.css';
 
 class Home extends Component {
   state = {
     size: 'large',
   };
   render() {
-    const size = this.state.size;
     return (
-      <div>
-        <header>
-          <h1 className="App-title">Hello Hiplyst!</h1>
-            <Link to={'/signup'}><Button type="primary" shape="round" size={size}>Sign Up</Button></Link>
+      <div className="home-bg">
+        <header className="home">
+          <h1 className="App-title">Upcycle</h1>
+          <img className="hero-img" src="https://media0.giphy.com/media/etKPlfE85HW8udMMDl/giphy.gif"/>
             <p/>
-            <Link to={'/dashboard'}><Button type="primary" shape="round" size={size} ghost>Login</Button></Link>
+            <Link to={'/signup'}><button className="signup-btn">SIGN UP</button></Link>
+            <p/>
+            <Link to={'/dashboard'}><button className="login-btn">LOGIN</button></Link>
         </header>
       </div>
     );
