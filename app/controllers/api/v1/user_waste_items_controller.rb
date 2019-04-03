@@ -2,6 +2,8 @@ module Api::V1
   class UserWasteItemsController < ApplicationController
   # before_action :set_user_waste_item, only: [:show, :update, :destroy]
 
+  before_action :load_user, only: [:create]
+
   # GET /user_waste_items
   def index
     @user_waste_items = UserWasteItem.all
@@ -17,9 +19,18 @@ module Api::V1
   # POST /user_waste_items
   def create
     @user_waste_item = UserWasteItem.new(user: current_user, waste_item_id: params["user_waste_item"]["waste_item_id"])
+    @ward = Ward.find_by(:name => 1)
 
     if @user_waste_item.save
+      @user.points += @user_waste_item.points
+      @user.waste_diverted += @user_waste_item.weight
+      @ward.points += @user_waste_item.points
+      @user.save
+      @ward.save
+      p @ward.points
+      p @user.points
       render json: @user_waste_item, status: :created
+
     else
       render json: @user_waste_item.errors, status: :unprocessable_entity
     end
@@ -43,6 +54,14 @@ module Api::V1
     # Use callbacks to share common setup or constraints between actions.
     def set_user_waste_item
       @user_waste_item = UserWasteItem.find(params[:id])
+    end
+
+    def load_user
+      @user = User.find(1)
+    end
+
+    def load_ward
+      @ward = Ward.find_by(:name => 1)
     end
 
     # Only allow a trusted parameter "white list" through.
