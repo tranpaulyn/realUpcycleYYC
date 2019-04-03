@@ -25,10 +25,9 @@ module Api::V1
       @user.points += @user_waste_item.points
       @user.waste_diverted += @user_waste_item.weight
       @ward.points += @user_waste_item.points
+      @ward.total_weight += @user_waste_item.weight
       @user.save
       @ward.save
-      p @ward.points
-      p @user.points
       render json: @user_waste_item, status: :created
 
     else
