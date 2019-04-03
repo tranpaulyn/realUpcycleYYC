@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import "antd/dist/antd.css";
 import {Avatar, Progress, Alert, Collapse, Icon} from 'antd';
 import axios from 'axios'
+import Application from './UserWasteList.jsx';
 
 const Panel = Collapse.Panel
 
@@ -23,6 +24,9 @@ const genExtra = () => (
     }}
   />
 )
+
+
+
 class Dashboard extends Component {
     constructor(props) {
       super(props)
@@ -32,7 +36,6 @@ class Dashboard extends Component {
           wasteItems: []
       }
   }
-
   componentDidMount() {
     axios.get('api/v1/users')
     .then(users => {
@@ -50,13 +53,26 @@ class Dashboard extends Component {
       
       <div className="dashboard">
                   {this.state.users.map( user => {
-                    if (user.name === 'Rocky'){
+                    let imgUrl;
+                    if (user.badge === 'Seedling') {
+                       imgUrl = ("/seed.png")
+                    } else if (user.badge === 'Sapling'){
+                       imgUrl = ("/seedling.png")
+                    } else if(user.badge === 'Tree'){
+                       imgUrl = ("/tinyleaf.png")
+                    } else if(user.badge === 'Wise Tree'){
+                       imgUrl = ("/tinytree.png")
+                    } else if(user.badge === 'Ancient Tree'){
+                       imgUrl = ("/tree.png")
+                    }
+                  
+                    if (user.name === 'Johnny'){
                       let awardMessage = `Congratulations, you've been awarded ${user.award}`
                return (
         <div className="profile">
           <Avatar size={192} icon="user" src="http://www.imfdb.org/images/7/7a/Ice_Cube-AK-74.jpg" alt="user-pic"/>
           <br/>
-          <img className="badge-pic" src="https://pbs.twimg.com/media/B0GI7DuCcAAbxJ_.png" height="37" width="37" alt="user-badge"/>
+          <img className="badge-pic" src={imgUrl} height="37" width="37" alt="user-badge"/>
           <span className="text-section">
             <p className="user-full-name">{user.name}</p>
             <p className="diversion-statement">You've diverted 8 whale testicles from the landfill since registration!</p>
@@ -80,7 +96,7 @@ class Dashboard extends Component {
                 <span className="neighbourhood-column">
                   <p className="ranking-header">6 out of 9</p>
                   <br/> 
-                  <p className="neighbourhood-meter">The Bronx</p>
+                  <p className="neighbourhood-meter">Ward {user.ward}</p>
                   </span>
                 </div>
               </div>
@@ -90,6 +106,7 @@ class Dashboard extends Component {
               closable=""
               afterClose=""
             />
+            <Application />
               </div>
                        )
                       }})}

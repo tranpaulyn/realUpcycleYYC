@@ -162,3 +162,21 @@ button.Garbage:hover{
   flex-basis: 100%;
   flex: 1;
 }
+
+.moveTextLeft{
+  float: left;
+  padding-left: 3em
+}
+
+.moveTextRight{
+  float: right;
+  padding-right: 3em
+}
+
+.middleText{
+  text-align: center;
+}
+
+.linkcolorchange{
+  color: grey
+}

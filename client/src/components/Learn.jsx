@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Popup from "reactjs-popup";
+
 class Home extends Component {
   render() {
 
@@ -9,9 +9,7 @@ class Home extends Component {
           <h1 className="App-title">This is the Learn route!</h1>
         </header>
         <div>
-        <Popup trigger={<button> Tip of the DAY</button>} position="right center">
-    <div>Coolguy69 was here</div>
-  </Popup>
+          <a target='_blank' href='http://www.calgary.ca/UEP/WRS/Pages/Recycling-information/Residential-services/Recycling-depots/Recycling-Depots.aspx'>Find a bottle depot near you</a>
         </div>
       </div>
     );
