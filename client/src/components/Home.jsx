@@ -8,6 +8,8 @@ class Home extends Component {
   };
   render() {
     return (
+
+      
       <div className="home-bg">
         <header className="home">
           <h1 className="App-title">Upcycle</h1>
