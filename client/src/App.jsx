@@ -7,7 +7,6 @@ import Add from './components/Add_item.jsx';
 import Dashboard from './components/Dashboard.jsx';
 import Learn from './components/Learn.jsx';
 import Dummy from './components/Dummy.jsx';
-import Navbar from './components/Navbar.jsx';
 import withStyles from './components/Footer.jsx';
 
 class App extends Component {
