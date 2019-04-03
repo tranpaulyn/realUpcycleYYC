@@ -6,20 +6,30 @@ module Api::V1
   def index
     @user_waste_items = UserWasteItem.all
 
-    render json: @user_waste_items
+    items = []
+
+    @user_waste_item.each do |item|
+      items.push({id: item.id, user_id: item.user_id, waste_item_id: item.waste_item_id, waste_name: item.waste_item.name, compostable: item.waste_item.compostable, recyclable: item.waste_item.recyclable, garbage: item.waste_item.garbage, points: item.points, weight: item.weight, type: item.waste_item.type_of_waste, instruction: item.waste_item.instructions})
+    end
+
+    render json: items
   end
 
   # GET /user_waste_items/1
   def show
-    render json: @user_waste_item
+    render json: @user_waste_item.to_json(:include => [:name])
   end
 
   # POST /user_waste_items
   def create
     @user_waste_item = UserWasteItem.new(user: current_user, waste_item_id: params["user_waste_item"]["waste_item_id"])
+    puts 'Hello WOROD'  
+    puts @user_waste_item.to_json(include: :waste_item )
+    puts @user_waste_item.to_json
+    puts 'HELOOS WEOd'
 
     if @user_waste_item.save
-      render json: @user_waste_item, status: :created
+      render json: @user_waste_item.to_json(include: :waste_item), status: :created
     else
       render json: @user_waste_item.errors, status: :unprocessable_entity
     end

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import "antd/dist/antd.css";
 import {Avatar, Progress, Alert, Collapse, Icon} from 'antd';
 import axios from 'axios'
+import Application from './UserWasteList.jsx';
 
 const Panel = Collapse.Panel
 
@@ -65,7 +66,7 @@ class Dashboard extends Component {
                        imgUrl = ("/tree.png")
                     }
                   
-                    if (user.name === 'Connor'){
+                    if (user.name === 'Johnny'){
                       let awardMessage = `Congratulations, you've been awarded ${user.award}`
                return (
         <div className="profile">
@@ -105,6 +106,7 @@ class Dashboard extends Component {
               closable=""
               afterClose=""
             />
+            <Application />
               </div>
                        )
                       }})}
