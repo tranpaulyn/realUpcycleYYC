@@ -76,6 +76,8 @@ class Signup extends Component {
                     </div>
                     <div className='input-field'>
                         <button type='submit' className="signup-pg-btn">Sign Up</button>
+                        <br/>
+                        <p><a href="/">or Go Back</a></p>
                     </div>
                 </form>
                 </div>
