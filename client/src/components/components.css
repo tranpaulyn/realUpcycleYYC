@@ -184,10 +184,8 @@ h3{
 
 .single-list {
     border-bottom: 1px solid lightgrey;
-    width: 80%;
-    margin: auto;
-    padding-top: 2em;
-    padding-bottom: 1em;
+    width: 100%;
+    padding: 2em 2em 1em 2em;
 }
 
 .container {
