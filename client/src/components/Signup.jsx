@@ -24,11 +24,11 @@ class Signup extends Component {
     console.log(this.state)
     var progress = 0  
     if(this.state.name !== ''){
-        progress += 35
+        progress += 33.33
         } if(this.state.email !== ''){
-        progress += 35
+        progress += 33.33
         } if(e.target.value === 'ward'){
-        progress += 35
+        progress += 33.34
         }
         this.setState({progress: progress})
     }
