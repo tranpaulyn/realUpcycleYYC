@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Footing from './Footer.jsx';
 
 export default class Search extends React.Component {
     state = {
@@ -30,6 +31,7 @@ export default class Search extends React.Component {
             </button>
           </div>
             </form>
+            <Footing />
             </div>
         );
     }

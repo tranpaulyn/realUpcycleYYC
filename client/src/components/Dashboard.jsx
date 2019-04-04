@@ -3,6 +3,8 @@ import "antd/dist/antd.css";
 import {Avatar, Progress, Alert} from 'antd';
 import axios from 'axios'
 import UserWasteList from './UserWasteList.jsx';
+import Application from './UserWasteList.jsx';
+import Footing from './Footer.jsx';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -61,6 +63,7 @@ class Dashboard extends Component {
 
             let points = user.points;
             let stringPoints = points.toLocaleString();
+
           return (
             
             <div className="profile">
@@ -92,7 +95,12 @@ class Dashboard extends Component {
               closable=""
               afterClose=""
             />
+
             <UserWasteList />
+            <Application />
+            <Footing />
+
+
               </div>
                        )
                       }})}

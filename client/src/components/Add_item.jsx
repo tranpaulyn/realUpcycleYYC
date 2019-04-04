@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Button, Input } from 'antd';
 import "antd/dist/antd.css";
+import Footing from './Footer.jsx';
 import './components.css'
 
 class Add extends Component {
@@ -92,6 +93,7 @@ class Add extends Component {
                   )
                 }})}
             </div>
+            <Footing />
       </div>
     );
   }
