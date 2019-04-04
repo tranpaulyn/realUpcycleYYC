@@ -11,7 +11,8 @@ class Dashboard extends Component {
       this.state = {
           users: [],
           userWasteItems: [],
-          wasteItems: []
+          wasteItems: [],
+          wards: []
       }
   }
   componentDidMount() {
@@ -21,6 +22,15 @@ class Dashboard extends Component {
             users: users.data
         })
         console.log(users.data)
+    })
+    .catch(error => console.log(error))
+
+    axios.get('api/v1/wards')
+    .then(wards => {
+      this.setState({
+        wards: wards.data
+      })
+      console.log(wards.data)
     })
     .catch(error => console.log(error))
   }
@@ -76,7 +86,7 @@ class Dashboard extends Component {
       
                 <div className="column">
                 <span className="neighbourhood-column">
-                  <p className="ranking-header">6 out of 14</p>
+                  <p className="ranking-header">{(this.state.wards.findIndex(x => x.name == user.ward) + 1)} out of 14</p>
                   <br/> 
                   <p className="neighbourhood-meter">Ward {user.ward}</p>
                   </span>
@@ -92,7 +102,7 @@ class Dashboard extends Component {
             <Footing />
 
               </div>
-                       )
+)
                       }})}
       </div>
     )

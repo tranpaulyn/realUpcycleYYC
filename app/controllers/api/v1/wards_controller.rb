@@ -4,8 +4,7 @@ class WardsController < ApplicationController
 
   # GET /wards
   def index
-    @wards = Ward.all
-
+    @wards = Ward.order(points: :desc)
     render json: @wards
   end
 

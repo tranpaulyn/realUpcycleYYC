@@ -6,8 +6,8 @@ import Signup from './components/Signup.jsx';
 import Add from './components/Add_item.jsx';
 import Dashboard from './components/Dashboard.jsx';
 import Learn from './components/Learn.jsx';
-import Dummy from './components/Dummy.jsx';
 import withStyles from './components/Footer.jsx';
+import Leaderboard from './components/Leaderboard.jsx';
 
 class App extends Component {
   render() {
@@ -21,7 +21,7 @@ class App extends Component {
   <Route exact path="/Learn" component={Learn} />
   {/* <Route exact path="/Navbar" component={withStyles} /> */}
   <Route exact path="/Footer" component={withStyles} />
-  <Route exact path="/dummy" component={Dummy} />
+  <Route exact path="/Leaderboard" component={Leaderboard} />
 </Switch>
       </div>
     );

@@ -4,7 +4,6 @@ class WardsController < ApplicationController
   # GET /wards
   def index
     @wards = Ward.all
-
     render json: @wards
   end
 

@@ -15,7 +15,6 @@ class UserWasteItemsController < ApplicationController
 
   # POST /user_waste_items
   def create
-    puts 'believe it'
     @user_waste_item = UserWasteItem.new(user_id: 1, waste_item_id: 9)
 
     if @user_waste_item.save
