@@ -3,6 +3,7 @@ import "antd/dist/antd.css";
 import {Avatar, Progress, Alert, Collapse, Icon} from 'antd';
 import axios from 'axios'
 import Application from './UserWasteList.jsx';
+import Footing from './Footer.jsx';
 
 const Panel = Collapse.Panel
 
@@ -66,11 +67,11 @@ class Dashboard extends Component {
                        imgUrl = ("/tree.png")
                     }
                   
-                    if (user.name === 'Hafiz'){
+                    if (user.name === 'Connor'){
                       let awardMessage = `Congratulations, you've been awarded ${user.award}`
                return (
         <div className="profile">
-          <Avatar size={192} icon="user" src="http://www.imfdb.org/images/7/7a/Ice_Cube-AK-74.jpg" alt="user-pic"/>
+          <Avatar size={192} icon="user" src="http://2.bp.blogspot.com/-6TRdExpxjDY/Tp90OcEW94I/AAAAAAAACAg/ySVTe7P3KWs/s1600/Squidward+Wallpaper.jpg" alt="user-pic"/>
           <br/>
           <img className="badge-pic" src={imgUrl} height="37" width="37" alt="user-badge"/>
           <span className="text-section">
@@ -107,6 +108,8 @@ class Dashboard extends Component {
               afterClose=""
             />
             <Application />
+            <Footing />
+
               </div>
                        )
                       }})}

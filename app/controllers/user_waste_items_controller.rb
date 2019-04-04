@@ -45,6 +45,10 @@ class UserWasteItemsController < ApplicationController
     #   @user_waste_item = UserWasteItem.find(params[:id])
     # end
 
+    def load_user
+      @user = User.find(params[:user_id])
+    end
+
     # Only allow a trusted parameter "white list" through.
     def user_waste_item_params
       params.require(:user_waste_item).permit(:waste_item_id)

@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
-import ListsContainer from './ListsContainer';
 import { Link } from 'react-router-dom';
+import './components.css';
 
 class Home extends Component {
+  state = {
+    size: 'large',
+  };
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Hello Hiplyst!</h1>
-            <Link className='signuplink' to={'/signup'}>Signup</Link>
-            <Link className='signuplink' to={'/dashboard'}>Login</Link>
+
+      
+      <div className="home-bg">
+        <header className="home">
+          <h1 className="App-title">Upcycle</h1>
+          <img className="hero-img" src="https://media0.giphy.com/media/etKPlfE85HW8udMMDl/giphy.gif"/>
+            <p/>
+            <Link to={'/signup'}><button className="signup-btn">SIGN UP</button></Link>
+            <p/>
+            <Link to={'/dashboard'}><button className="login-btn">LOGIN</button></Link>
         </header>
-        <ListsContainer />
       </div>
     );
   }

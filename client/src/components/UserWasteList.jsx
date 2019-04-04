@@ -68,7 +68,6 @@ class UserWasteList extends Component {
         return(
 <div className='container'>
 
-          <h1>Collapseable Things</h1>
           <Collapse defaultActiveKey={['1']} onChange={callback}>
 
             <Panel header="Recycle" key='1' extra={genExtra()}>

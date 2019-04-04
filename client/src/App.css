@@ -180,3 +180,26 @@ button.Garbage:hover{
 .linkcolorchange{
   color: grey
 }
+
+#footer{
+  background-image: linear-gradient(to bottom right,#41cd8c, #66b9ea, #6d78e7);
+  background-size: cover;
+  width:103%;
+  margin-left:-10px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.collapseBar{
+  padding-bottom: 5em;
+}
+
+#footerIcon{
+  color: white
+}
+
+#footerIcon.hover{
+  color:black
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Button, Input } from 'antd';
 import "antd/dist/antd.css";
+import Footing from './Footer.jsx';
 
 class Add extends Component {
   constructor() {
@@ -32,9 +33,7 @@ class Add extends Component {
     axios.post('api/v1/user_waste_items', { user_waste_item: { waste_item_id }})
         .then(items => {
             console.log(items)
-            // this.setState({
-            //     waste_items: items.data
-            // })
+            window.location.replace("/dashboard")
         })
         .catch(error => console.log(error))
   }
@@ -64,6 +63,7 @@ class Add extends Component {
                    )
                 })}
             </div>
+            <Footing />
       </div>
     );
   }
