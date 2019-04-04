@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import axios from 'axios'
 import "antd/dist/antd.css";
 import {Collapse, Icon} from 'antd';
-import Dashboard from './Dashboard';
 import {Link} from 'react-router-dom'
+import './components.css'
+
 const Panel = Collapse.Panel
 
 
@@ -11,19 +12,9 @@ function callback(key){
   console.log(key);
 }
 
-const text = `Who is the coolest of all the guys?
-Why of course it the one the only CoolGuy69 aint no
-other coolguys able to be a cooler guy.`
-
 const genExtra = () => (
   <Link to='/add' className='linkcolorchange'>
-  <Icon 
-    type="plus"
-    // onClick={(event) => {
-    //   // If you don't want click extra trigger collapse, you can prevent this:
-    //   event.stopPropagation();
-    // }}
-  />
+  <Icon type="plus" />
       </Link>
 )
 
@@ -67,8 +58,6 @@ class UserWasteList extends Component {
     render() {
         return(
 <div className='container'>
-
-          <h1>Collapseable Things</h1>
           <Collapse defaultActiveKey={['1']} onChange={callback}>
 
             <Panel header="Recycle" key='1' extra={genExtra()}>

@@ -189,3 +189,28 @@ h3{
     padding-top: 2em;
     padding-bottom: 1em;
 }
+
+.container {
+    padding-top: 2em;
+}
+
+.logo-header{
+    background-image: linear-gradient(to bottom right,#41cd8c, #66b9ea, #6d78e7);
+    margin-bottom: 2em;
+    background-image: linear-gradient(to bottom right,#41cd8c, #66b9ea, #6d78e7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.reg-header {
+    font-size: 3em;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 0.15em;
+}
+
+.profile {
+    margin-top: 6em;
+}
