@@ -1,7 +1,7 @@
 .home-bg {
     background-image: linear-gradient(to bottom right,#41cd8c, #66b9ea, #6d78e7);
     background-size: cover;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
 }
 
@@ -200,6 +200,9 @@ h3{
     width: 100%;
     top: 0;
     z-index: 1;
+    -webkit-box-shadow: 0px 10px 19px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 19px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 19px -12px rgba(0,0,0,0.75);
 }
 
 .reg-header {
@@ -211,4 +214,25 @@ h3{
 
 .profile {
     margin-top: 6em;
+}
+
+.user-full-name {
+    font-size: 2em;
+}
+
+.diversion-statement {
+    font-size: 1.25em;
+    margin-top: -1em;
+}
+
+.db-level {
+    font-size: 2.5em;
+    border-bottom: 3px solid #41cd8c;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.user-level {
+    font-size: 2em;
+    margin-top: -1em;
 }

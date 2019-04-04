@@ -10,7 +10,7 @@ module Api::V1
 
     items = []
 
-    @user_waste_item.each do |item|
+    @user_waste_items.each do |item|
       items.push({id: item.id, user_id: item.user_id, waste_item_id: item.waste_item_id, waste_name: item.waste_item.name, compostable: item.waste_item.compostable, recyclable: item.waste_item.recyclable, garbage: item.waste_item.garbage, points: item.points, weight: item.weight, type: item.waste_item.type_of_waste, instruction: item.waste_item.instructions})
     end
 
