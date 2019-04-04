@@ -71,6 +71,7 @@ class Add extends Component {
   
         <div className="lists-container">
                 {filteredItems.map( item => {
+                  if (item.instructions) {
                    return (
                        <div className="single-list">
                         <p className="item-name"><strong>{this.capitalize(item.name)}</strong>
@@ -80,7 +81,16 @@ class Add extends Component {
                         <p><Button type="primary" onClick={() => this.addWasteItem(item.id)}>Add</Button></p>
                       </div>
                    )
-                })}
+                } else {
+                  return (
+                    <div className="single-list">
+                    <p className="item-name"><strong>{this.capitalize(item.name)}</strong>
+                    <span className="item-type"><strong>Type: </strong>{this.capitalize(item.type_of_waste)} </span>
+                    </p>
+                    <p><Button type="primary" onClick={() => this.addWasteItem(item.id)}>Add</Button></p>
+                  </div>
+                  )
+                }})}
             </div>
       </div>
     );
