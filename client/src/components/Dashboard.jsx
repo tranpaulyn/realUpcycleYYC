@@ -97,7 +97,6 @@ class Dashboard extends Component {
             />
 
             <UserWasteList />
-            <Application />
             <Footing />
 
 
