@@ -47,7 +47,7 @@ class Dashboard extends Component {
             imgUrl = ("/tree.png")
           }
 
-          if (user.name === 'Dan'){
+          if (user.name === 'Connor'){
             let awardMessage = `Congratulations, you've been awarded ${user.award}`
           return (
             
