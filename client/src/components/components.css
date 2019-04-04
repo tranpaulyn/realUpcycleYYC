@@ -1,7 +1,7 @@
 .home-bg {
     background-image: linear-gradient(to bottom right,#41cd8c, #66b9ea, #6d78e7);
     background-size: cover;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
 }
 
@@ -140,7 +140,10 @@ h3{
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1;
+    z-index: 3;
+    -webkit-box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.17);
+    -moz-box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.17);
+    box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.17);
 }
 
 .search-header{
@@ -157,10 +160,10 @@ h3{
 .results-message {
     margin-top: 8.5em;
     text-align: left;
-    padding: 0.5em 1em 0 1em;
+    padding: 1em 1em 0 1em;
     font-size: 1.5em;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     background-color: #fff;
     width: 100%;
 }
@@ -200,6 +203,9 @@ h3{
     width: 100%;
     top: 0;
     z-index: 1;
+    -webkit-box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.17);
+    -moz-box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.17);
+    box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.17);
 }
 
 .reg-header {
@@ -211,4 +217,85 @@ h3{
 
 .profile {
     margin-top: 6em;
+}
+
+.user-full-name {
+    font-size: 2em;
+}
+
+.diversion-statement {
+    font-size: 1.25em;
+    margin-top: -1em;
+}
+
+.db-level {
+    font-size: 1.5em;
+    border-bottom: 3px solid #41cd8c;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding-top: 0.75em;
+    font-weight: 600;
+}
+
+.user-level {
+    font-size: 1.5em;
+    margin-top: -0.5em;
+}
+
+.user-points {
+    font-size: 1.5em;
+    margin-top: -0.5em;
+}
+.award-alert {
+    font-size: 1.25em !important;
+    font-weight: 600 !important;
+    border-radius: 0 !important;
+}
+
+.progress-bars {
+    width: 100%;
+}
+
+.column {
+    width: 33%
+}
+
+.item-table {
+    width: 100%;
+}
+
+.table-row-title {
+    text-align: left;
+}
+
+.table-row-title-type {
+    text-align: right;
+}
+
+.table-row-name {
+    text-align: left;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.table-row-remove {
+    text-align: right;
+}
+
+.row-table {
+    border-bottom: 2px dashed lightgrey;
+}
+
+.trash {
+    color: red;
+    margin-top: 0.20em;
+}
+
+.trash:hover {
+    color: darkred;
+}
+
+.delete-btn {
+    border: none;
+    background: none;
 }
