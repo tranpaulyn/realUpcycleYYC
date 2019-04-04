@@ -44,13 +44,13 @@ class Footer extends React.Component {
           icon={<HomeIcon id='footerIcon'/>}
           id='footerIcon'
         />
-        <BottomNavigationAction
+        {/* <BottomNavigationAction
           label="Profile"
           value="profile"
           icon={<ProfileIcon />}
           href='/dashboard'
           id='footerIcon'
-        />
+        /> */}
         <BottomNavigationAction label="Add" value="add" icon={<AddIcon />} href="/add" 
           id='footerIcon'
           />

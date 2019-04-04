@@ -6,11 +6,16 @@ class Home extends Component {
 
     return (
       <div className="App">
-        <header className="App-headesr">
-          <h1 className="App-title">This is the Learn route!</h1>
+        <header className="App-headers">
         </header>
         <div>
           <a target='_blank' href='http://www.calgary.ca/UEP/WRS/Pages/Recycling-information/Residential-services/Recycling-depots/Recycling-Depots.aspx'>Find a bottle depot near you</a>
+          <div></div>
+          <a target='_blank' href='http://www.calgary.ca/UEP/WRS/Pages/What-goes-where/Computers-and-computer-accessories.aspx'>Where to dispose of electronics</a>
+          <div></div>          
+          <a target='_blank' href='http://www.calgary.ca/UEP/WRS/Pages/Recycling-information/Residential-services/Recycling-depots/Recycling-Depots.aspx'>Find a bottle depot near you</a>
+          <div></div>          
+          <a target='_blank' href='http://www.calgary.ca/UEP/WRS/Pages/Recycling-information/Residential-services/Recycling-depots/Recycling-Depots.aspx'>Find a bottle depot near you</a>       
         </div>
         <Footing />
       </div>
