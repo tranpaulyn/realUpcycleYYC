@@ -3,7 +3,6 @@ import "antd/dist/antd.css";
 import {Avatar, Progress, Alert} from 'antd';
 import axios from 'axios'
 import UserWasteList from './UserWasteList.jsx';
-import Application from './UserWasteList.jsx';
 import Footing from './Footer.jsx';
 
 class Dashboard extends Component {
@@ -42,7 +41,7 @@ class Dashboard extends Component {
               <h1 className="reg-header">Upcycle</h1>
             </div>
         {this.state.users.map( user => {
-          let imgUrl;
+          let imgUrl = "";
           if (user.badge === 'Seedling') {
             imgUrl = ("/seed.png")
           } else if (user.badge === 'Sapling'){
