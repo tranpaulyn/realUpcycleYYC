@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import "antd/dist/antd.css";
 import {Avatar, Progress, Alert} from 'antd';
 import axios from 'axios'
-import Application from './UserWasteList.jsx';
+import UserWasteList from './UserWasteList.jsx';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -54,19 +54,22 @@ class Dashboard extends Component {
           }
 
           if (user.name === 'Connor'){
-            let awardMessage = `Congratulations, you've been awarded ${user.award}`
-            let uniqueAvatar = avatars[42 % 1]
-            console.log(user.waste_diverted)
-            let wasteDiverted = (user.waste_diverted/24).toFixed(2)
+            let awardMessage = `Congratulations, you've earned ${user.award}!`
+            let uniqueAvatar = avatars[42 % 1];
+            console.log(user.waste_diverted);
+            let wasteDiverted = (user.waste_diverted/24).toFixed(2);
+
+            let points = user.points;
+            let stringPoints = points.toLocaleString();
           return (
             
             <div className="profile">
-              <Avatar style={{ backgroundColor: '#66b9ea' }} size={192} icon="user" src={uniqueAvatar} alt="user-pic"/>
+              <Avatar style={{ backgroundColor: '#66b9ea' }} size={150} icon="user" src={uniqueAvatar} alt="user-pic"/>
             <br/>
             <img className="badge-pic" src={imgUrl} height="50" width="50" alt="user-badge"/>
             <p className="user-full-name">Hi, {user.name}!</p>
             <p className="diversion-statement">You've diverted {user.waste_diverted} KGs. <br/> That's equivalent to {wasteDiverted} beaver(s)!</p>
-                <div className="progress-bars">
+              <div className="progress-bars">
 
                 <div className="column">
                   <p className="db-level">LEVEL</p>
@@ -74,27 +77,22 @@ class Dashboard extends Component {
                 </div>
       
                 <div className="column">
-                <span className="points-column">
                 <Progress strokeColor={'#41cd8c'} type="dashboard" percent={(user.points % 1000)/10}/>
-                  <p className="points-meter">{user.points} points</p>
-                  </span>
                 </div>
       
                 <div className="column">
-                <span className="neighbourhood-column">
-                  <p className="ranking-header">6 out of 14</p>
-                  <br/> 
-                  <p className="neighbourhood-meter">Ward {user.ward}</p>
-                  </span>
+                <p className="db-level">POINTS</p>
+                  <p className="user-points">{stringPoints}</p>
                 </div>
               </div>
               <Alert
+              className="award-alert"
               message={awardMessage}
               type="success"
               closable=""
               afterClose=""
             />
-            <Application />
+            <UserWasteList />
               </div>
                        )
                       }})}
