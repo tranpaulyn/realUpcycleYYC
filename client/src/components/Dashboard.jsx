@@ -46,12 +46,12 @@ class Dashboard extends Component {
             imgUrl = ("/tree.png")
           }
 
-          if (user.name === 'Connor'){
+          if (user.name === 'Dan'){
             let awardMessage = `Congratulations, you've been awarded ${user.award}`
           return (
             
             <div className="profile">
-              <Avatar size={192} icon="user" src="http://www.imfdb.org/images/7/7a/Ice_Cube-AK-74.jpg" alt="user-pic"/>
+              <Avatar size={192} icon="user" src="https://i.kym-cdn.com/photos/images/original/000/182/031/1317771175001.jpg" alt="user-pic"/>
             <br/>
             <img className="badge-pic" src={imgUrl} height="45" width="45" alt="user-badge"/>
             <span className="text-section">
