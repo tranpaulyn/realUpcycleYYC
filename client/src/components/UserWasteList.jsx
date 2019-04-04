@@ -4,6 +4,7 @@ import "antd/dist/antd.css";
 import {Collapse, Icon} from 'antd';
 import {Link} from 'react-router-dom'
 import './components.css'
+import DeleteFroever from '@material-ui/icons/DeleteForever'
 
 const Panel = Collapse.Panel
 
@@ -55,58 +56,89 @@ class UserWasteList extends Component {
         .catch(error => console.log(error))
     }
 
+    capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      }
+
+    deleteWasteItem(id){
+        axios.delete('api/v1/user_waste_items/' + id)
+            .then(items => {
+                console.log(items)
+                window.location.replace("/dashboard")
+            })
+            .catch(error => console.log(error))
+    }
+
     render() {
         return(
-<div className='container'>
-          <Collapse defaultActiveKey={['1']} onChange={callback}>
-
+          <div className='container'>
+            <Collapse defaultActiveKey={['1']} onChange={callback}>
             <Panel header="Recycle" key='1' extra={genExtra()}>
-          <div><span className='moveTextLeft'>Name</span><span className='middleText'> Points</span><span className='moveTextRight'> Type</span></div>
-
-                {this.state.wasteItems.map(wasteItem => {
-                  if(wasteItem.recyclable === true){
-                    return (<div>
-                      <hr></hr>
-                    <div><span className='moveTextLeft'>{wasteItem.name}</span><span className='middleText'> {wasteItem.points}</span><span className='moveTextRight'> {wasteItem.type_of_waste}</span></div>
-                        <div><b>{wasteItem.instructions}</b></div>
-                    </div>
-                            
-                      )
-                }})
-            }
+              <table className="item-table">
+                  <tr>
+                      <th className="table-row-title">Item</th>
+                      <th>Points</th>
+                      <th>Type</th>
+                      <th>Remove</th>
+                  </tr>
+                {this.state.userWasteItems.map(wasteItem => {
+                    console.log(wasteItem.id)
+                  if(wasteItem.recyclable){
+                    return (<tr className="row-table">
+                        <td className="table-row-name">{this.capitalize(wasteItem.waste_name)}</td>
+                        <td>{wasteItem.points}</td>
+                        <td>{this.capitalize(wasteItem.type)}</td>
+                        <td> <button className="delete-btn" onClick={() => this.deleteWasteItem(wasteItem.id)}><DeleteFroever className="trash"/></button> </td>
+                    </tr>)
+                    }
+                  }
+                )}
+                </table>
             </Panel>
 
             <Panel header="Compost" key='2' extra={genExtra()}>
-          <div><span className='moveTextLeft'>Name</span><span className='middleText'> Points</span><span className='moveTextRight'> Type</span></div>
-
-                {this.state.wasteItems.map(wasteItem => {
-                  if(wasteItem.compostable === true){
-                    return (<div>
-                      <hr></hr>
-                    <div><span className='moveTextLeft'>{wasteItem.name}</span><span className='middleText'> {wasteItem.points}</span><span className='moveTextRight'> {wasteItem.type_of_waste}</span></div>
-                        <div><b>{wasteItem.instructions}</b></div>
-                    </div>
-                            
-                      )
-                }})
-            }            </Panel>
-
-            <Panel header="Garbage" key='3' extra={genExtra()}>
-            <div><span className='moveTextLeft'>Name</span><span className='middleText'> Points</span><span className='moveTextRight'> Type</span></div>
-
-                {this.state.wasteItems.map(wasteItem => {
-                  if(wasteItem.garbage === true && wasteItem.compostable === false && wasteItem.recyclable === false){
-                    return (<div>
-                      <hr></hr>
-                    <div><span className='moveTextLeft'>{wasteItem.name}</span><span className='middleText'> {wasteItem.points}</span><span className='moveTextRight'> {wasteItem.type_of_waste}</span></div>
-                        <div><b>{wasteItem.instructions}</b></div>
-                    </div>
-                            
-                      )
-                }})
-            }
+            <table className="item-table">
+                  <tr>
+                      <th className="table-row-title">Item</th>
+                      <th>Points</th>
+                      <th>Type</th>
+                      <th>Remove</th>
+                  </tr>
+                {this.state.userWasteItems.map(wasteItem => {
+                  if(wasteItem.compostable){
+                    return (<tr className="row-table">
+                        <td className="table-row-name">{wasteItem.waste_name}</td>
+                        <td>{wasteItem.points}</td>
+                        <td>{wasteItem.type}</td>
+                        <td> <button className="delete-btn"><DeleteFroever className="trash"/></button> </td>
+                    </tr>)
+                    }
+                  }
+                )}
+                </table>
             </Panel>
 
+            <Panel header="Garbage" key='3' extra={genExtra()}>
+            <table className="item-table">
+                  <tr>
+                      <th className="table-row-title">Item</th>
+                      <th>Points</th>
+                      <th>Type</th>
+                      <th>Remove</th>
+                  </tr>
+                {this.state.userWasteItems.map(wasteItem => {
+                  if(wasteItem.garbage === true && wasteItem.compostable === false && wasteItem.recyclable === false){
+                    return (<tr className="row-table">
+                        <td className="table-row-name">{wasteItem.waste_name}</td>
+                        <td>{wasteItem.points}</td>
+                        <td>{wasteItem.type}</td>
+                        <td> <button className="delete-btn"><DeleteFroever className="trash"/></button> </td>
+                    </tr>)
+                    }
+                  }
+                )}
+                </table>
+            </Panel>
           </Collapse>
         </div>
         )
