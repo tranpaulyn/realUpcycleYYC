@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import UserList from './UserList';
 import WasteList from './WasteList'
+import Footing from './Footer.jsx';
 
 class Home extends Component {
   render() {
@@ -11,6 +12,7 @@ class Home extends Component {
         </header>
         <UserList />
         <WasteList />
+        <Footing />
       </div>
     );
   }

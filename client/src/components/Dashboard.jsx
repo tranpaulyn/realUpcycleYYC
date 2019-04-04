@@ -3,6 +3,7 @@ import "antd/dist/antd.css";
 import {Avatar, Progress, Alert} from 'antd';
 import axios from 'axios'
 import Application from './UserWasteList.jsx';
+import Footing from './Footer.jsx';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -46,7 +47,7 @@ class Dashboard extends Component {
             imgUrl = ("/tree.png")
           }
 
-          if (user.name === 'Connor'){
+          if (user.name === 'Dan'){
             let awardMessage = `Congratulations, you've been awarded ${user.award}`
           return (
             
@@ -88,6 +89,8 @@ class Dashboard extends Component {
               afterClose=""
             />
             <Application />
+            <Footing />
+
               </div>
                        )
                       }})}
