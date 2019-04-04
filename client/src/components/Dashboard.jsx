@@ -19,6 +19,7 @@ class Dashboard extends Component {
         this.setState({
             users: users.data
         })
+        console.log(users.data)
     })
     .catch(error => console.log(error))
   }
@@ -50,7 +51,7 @@ class Dashboard extends Component {
           return (
             
             <div className="profile">
-              <Avatar size={192} icon="user" src="http://www.imfdb.org/images/7/7a/Ice_Cube-AK-74.jpg" alt="user-pic"/>
+              <Avatar size={192} icon="user" src="{user.uniqueAvatar}" alt="user-pic"/>
             <br/>
             <img className="badge-pic" src={imgUrl} height="45" width="45" alt="user-badge"/>
             <span className="text-section">
