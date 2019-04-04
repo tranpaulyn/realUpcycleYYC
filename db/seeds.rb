@@ -6,9 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-List.create(title:"West Sweden Road Trip", excerpt:"A cool road trip with stops in harbors of the coast")
-List.create(title:"Must have equipment for the outdoor photographer", excerpt:"My selection of gear for modern outdoor photography")
-
 Ward.create(name: 1, points: 62225, total_weight: 55.45)
 Ward.create(name: 2, points: 36975, total_weight: 33.27)
 Ward.create(name: 3, points: 68898, total_weight: 65.51)

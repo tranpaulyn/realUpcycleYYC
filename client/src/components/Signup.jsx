@@ -72,10 +72,13 @@ class Signup extends Component {
                           <option value='ward'>Ward 13</option>
                           <option value='ward'>Ward 14</option>
                         </select>
-                        <p><a target='_blank' rel='noopener noreferrer' href='http://www.calgary.ca/citycouncil/Pages/FindYourCouncillor.aspx'>Find your ward here</a></p>
+                        <p><br/><a target='_blank' rel='noopener noreferrer' href='http://www.calgary.ca/citycouncil/Pages/FindYourCouncillor.aspx'>Find your ward here</a></p>
                     </div>
                     <div className='input-field'>
+                    <p/><br/>
                         <button type='submit' className="signup-pg-btn">Sign Up</button>
+                        <p/>
+                        <p><a href="/">or Go Back</a></p>
                     </div>
                 </form>
                 </div>
