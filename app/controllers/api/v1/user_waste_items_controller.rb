@@ -1,8 +1,8 @@
 module Api::V1
   class UserWasteItemsController < ApplicationController
-  # before_action :set_user_waste_item, only: [:show, :update, :destroy]
+  before_action :set_user_waste_item, only: [:show, :update, :destroy]
 
-  before_action :load_user, only: [:create]
+  before_action :load_user, only: [:create, :destroy]
 
   # GET /user_waste_items
   def index
@@ -52,6 +52,14 @@ module Api::V1
 
   # DELETE /user_waste_items/1
   def destroy
+
+    @ward = Ward.find_by(:name => 1)
+    @user.points -= @user_waste_item.points
+    @user.waste_diverted -= @user_waste_item.weight
+    @ward.points-= @user_waste_item.points
+    @ward.total_weight -= @user_waste_item.weight
+    @user.save
+    @ward.save
     @user_waste_item.destroy
   end
 
