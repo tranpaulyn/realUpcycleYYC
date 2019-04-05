@@ -189,6 +189,7 @@ button.Garbage:hover{
   bottom: 0;
   display: flex;
   justify-content: space-around;
+  height: 5em;
 }
 
 .collapseBar{
