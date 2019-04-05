@@ -151,6 +151,7 @@ h3{
 
 .search-header{
     color: #fff;
+    text-align: center;
 }
 
 .search-input {
@@ -172,12 +173,14 @@ h3{
 }
 
 .lists-container {
-    padding-top: 15em;
-    margin: auto;
+    padding-top: 16em;
+    border-radius: 2em;
+    padding-bottom: 6em;
 }
 
 .item-name {
     text-align: left;
+    font-size: 1.25em;
 }
 
 .item-type {
@@ -189,8 +192,9 @@ h3{
 }
 
 .single-list {
-    border-bottom: 1px solid lightgrey;
-    width: 100%;
+    border-bottom: 2px dashed lightgrey;
+    /* width: 90%; */
+    margin: auto;
     padding: 2em 2em 1em 2em;
 }
 
