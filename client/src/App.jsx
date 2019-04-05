@@ -19,7 +19,6 @@ class App extends Component {
   <Route exact path="/add" component={Add} />
   <Route exact path="/dashboard" component={Dashboard} />
   <Route exact path="/Learn" component={Learn} />
-  {/* <Route exact path="/Navbar" component={withStyles} /> */}
   <Route exact path="/Footer" component={withStyles} />
   <Route exact path="/Leaderboard" component={Leaderboard} />
 </Switch>
