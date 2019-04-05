@@ -14,7 +14,7 @@ function Result(props) {
       transitionAppearTimeout={500}
     >
       <div className="quiz-result">
-        You're a <strong>{props.quizResult}</strong> recycler!
+      <strong>{props.quizResult}</strong> recycler!
       </div>
     </CSSTransition>
   );

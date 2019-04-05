@@ -21,7 +21,7 @@ var quizQuestions = [
       answers: [
           {
               type: "Intermediate",
-              content: "Wrap and label it before placing it in your BLACK bin"
+              content: "Wrap and label it before placing it in your black bin"
           },
           {
               type: "Expert",
@@ -29,7 +29,7 @@ var quizQuestions = [
           },
           {
               type: "Beginner",
-              content: "Wrap and label it before placing it in your BLUE bin"
+              content: "Wrap and label it before placing it in your blue bin"
           }
       ]
   },
@@ -38,15 +38,15 @@ var quizQuestions = [
       answers: [
           {
               type: "Intermediate",
-              content: "Put it in your BLUE bin"
+              content: "Put it in your blue bin"
           },
           {
               type: "Expert",
-              content: "Put in your GREEN bin"
+              content: "Put in your green bin"
           },
           {
               type: "Beginner",
-              content: "Put it in your BLACK bin"
+              content: "Put it in your black bin"
           }
       ]
   },
@@ -72,15 +72,15 @@ var quizQuestions = [
       answers: [
           {
               type: "Intermediate",
-              content: "Remove all wrappers, place candy in GREEN bin and wrappers in BLACK bin"
+              content: "Remove all wrappers, place candy in green bin and wrappers in black bin"
           },
           {
               type: "Expert",
-              content: "Eat the chocolate and candy, then place wrappers in BLACK bin."
+              content: "Eat the chocolate and candy, then place wrappers in black bin."
           },
           {
               type: "Beginner",
-              content: "Throw it in the BLACK bin"
+              content: "Throw it in the black bin"
           }
       ]
   }

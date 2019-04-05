@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import quizQuestions from './api/quizQuestions';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
-import logo from './logo.svg';
 import './quiz-app.css';
 import './quiz-index.css';
 import Footing from './components/Footer';
@@ -104,7 +103,7 @@ class QuizApp extends Component {
     if (result.length === 1) {
       this.setState({ result: result[0] });
     } else {
-      this.setState({ result: 'Undetermined' });
+      this.setState({ result: 'Intermediate' });
     }
   }
 
