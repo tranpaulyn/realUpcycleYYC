@@ -36,14 +36,14 @@ class Ranking extends Component {
         return(
             <div className="testing">
             {this.state.wards.map(ward => {
-                if(ward.name == 1) {
+                if(ward.name === 1) {
                     return(
             <List itemLayout="horizontal" dataSource={this.state.wards} renderItem={item => (
                 <List.Item>
                     <List.Item.Meta
                         avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                         title={<a href="https://ant.design">Ward {item.name}</a>}
-                        description={<p>Ward {item.name} is in position {this.state.wards.findIndex(x => x.name == item.name) + 1} out of 14 with {item.points} points.</p>}
+                        description={<p>Ward {item.name} is in position {this.state.wards.findIndex(x => x.name === item.name) + 1} out of 14 with {item.points} points.</p>}
                     />
                 </List.Item>
             )}/>
