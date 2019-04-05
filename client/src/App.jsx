@@ -8,6 +8,7 @@ import Dashboard from './components/Dashboard.jsx';
 import Learn from './components/Learn.jsx';
 import withStyles from './components/Footer.jsx';
 import Leaderboard from './components/Leaderboard.jsx';
+import Quiz from './QuizApp';
 import NotFound from './NotFound'
 import './components/components.css'
 
@@ -24,6 +25,7 @@ class App extends Component {
   <Route exact path="/Learn" component={Learn} />
   <Route exact path="/Footer" component={withStyles} />
   <Route exact path="/Leaderboard" component={Leaderboard} />
+  <Route exact path="/quiz" component={Quiz} />
   <Route component={NotFound} />
 </Switch>
 </Router>

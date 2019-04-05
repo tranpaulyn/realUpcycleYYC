@@ -1,23 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import StarIcon from '@material-ui/icons/Star';
 import BookIcon from '@material-ui/icons/ChromeReaderMode';
 import ArrowIcon from '@material-ui/icons/ChevronRight';
-
-
-const styles = theme => ({
-    root: {
-      width: '100%',
-      maxWidth: 360,
-      backgroundColor: theme.palette.background.paper,
-    },
-  });
-
+import {Link} from 'react-router-dom'
 class TipList extends Component {
     render() {
 
@@ -34,6 +22,16 @@ class TipList extends Component {
         <ArrowIcon />
       </ListItem>
       </a>
+      <div className='dottedLine'></div>
+      <Link to='/quiz'>
+      <ListItem button>
+        <ListItemIcon>
+        </ListItemIcon>
+        <BookIcon />
+        <ListItemText inset primary="Do a quiz" />
+        <ArrowIcon />
+      </ListItem>
+      </Link>
       <div className='dottedLine'></div>
       <a target='_blank' rel='noopener noreferrer' href='http://www.calgary.ca/UEP/WRS/Pages/What-goes-where/Computers-and-computer-accessories.aspx'>
       <ListItem button>
