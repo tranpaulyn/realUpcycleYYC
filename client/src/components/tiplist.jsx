@@ -5,9 +5,9 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import StarIcon from '@material-ui/icons/Star';
 import BookIcon from '@material-ui/icons/ChromeReaderMode';
 import ArrowIcon from '@material-ui/icons/ChevronRight';
+import './components.css'
 
 
 const styles = theme => ({
@@ -23,7 +23,7 @@ class TipList extends Component {
 
         return (
     <List component="nav" className='resourceLinks'>
-    <ListItemText>Resources</ListItemText>
+    <ListItemText><p className="resource-title">Resources</p></ListItemText>
     <div className='dottedLine'></div>
         <a target='_blank' rel='noopener noreferrer' href='http://www.calgary.ca/UEP/WRS/Pages/Recycling-information/Residential-services/Recycling-depots/Recycling-Depots.aspx'>
       <ListItem button>

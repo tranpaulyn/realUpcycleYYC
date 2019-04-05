@@ -311,3 +311,13 @@ h3{
     width: 80%;
     margin: auto;
 }
+
+.resource-title {
+    margin: auto;
+    padding-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.resourcesTab {
+    padding-bottom: 10em !important;
+}
