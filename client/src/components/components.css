@@ -304,3 +304,9 @@ h3{
     border: none;
     background: none;
 }
+
+.pick-up-date {
+    font-size: 1.25em;
+    width: 80%;
+    margin: auto;
+}
