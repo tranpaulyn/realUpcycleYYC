@@ -1,10 +1,9 @@
-module Api::V1
 class WardsController < ApplicationController
   before_action :set_ward, only: [:show, :update, :destroy]
 
   # GET /wards
   def index
-    @wards = Ward.order(points: :desc)
+    @wards = Ward.all
     render json: @wards
   end
 
@@ -48,5 +47,4 @@ class WardsController < ApplicationController
     def ward_params
       params.require(:ward).permit(:name)
     end
-end
 end
