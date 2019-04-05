@@ -5,13 +5,25 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import BookIcon from '@material-ui/icons/ChromeReaderMode';
 import ArrowIcon from '@material-ui/icons/ChevronRight';
+import './components.css'
+
+
+const styles = theme => ({
+    root: {
+      width: '100%',
+      maxWidth: 360,
+      backgroundColor: theme.palette.background.paper,
+    },
+  });
+
 import {Link} from 'react-router-dom'
+
 class TipList extends Component {
     render() {
 
         return (
     <List component="nav" className='resourceLinks'>
-    <ListItemText>Resources</ListItemText>
+    <ListItemText><p className="resource-title">Resources</p></ListItemText>
     <div className='dottedLine'></div>
         <a target='_blank' rel='noopener noreferrer' href='http://www.calgary.ca/UEP/WRS/Pages/Recycling-information/Residential-services/Recycling-depots/Recycling-Depots.aspx'>
       <ListItem button>

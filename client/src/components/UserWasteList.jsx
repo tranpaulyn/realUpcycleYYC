@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios'
 import "antd/dist/antd.css";
 import {Collapse, Icon} from 'antd';
-import {Link, Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import './components.css'
 import DeleteFroever from '@material-ui/icons/DeleteForever'
 

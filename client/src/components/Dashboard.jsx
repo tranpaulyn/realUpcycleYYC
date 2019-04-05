@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import "antd/dist/antd.css";
-import {Avatar, Progress, Alert} from 'antd';
+import {Avatar, Progress, Alert, Button, Icon} from 'antd';
 import axios from 'axios'
 import UserWasteList from './UserWasteList.jsx';
 import Footing from './Footer.jsx';
@@ -106,6 +106,27 @@ class Dashboard extends Component {
 
               </div>
               <Alert className="award-alert" message={awardMessage} type="success"/>
+              <p><br/></p>
+              <Button.Group>
+                <Button value="large">
+                  <Icon type="left" />
+                  Last Week
+                </Button>
+                <Button value="large">
+                Week of April 7, 2019
+                </Button>
+                <Button value="large">
+                  Next Week
+                  <Icon type="right" />
+                </Button>
+              </Button.Group>
+              <div className="pick-up-date">
+              <p><br/><strong>Your Next Green and Blue Cart Pickup</strong>
+              <br/>April 12, 2019</p>
+              <p><strong>Black Cart Pickup</strong>
+              <br/>April 25, 2019</p>
+              </div>
+
               <UserWasteList />
               <Footing />
             </div>
