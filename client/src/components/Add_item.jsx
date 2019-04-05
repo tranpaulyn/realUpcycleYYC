@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Button, Input } from 'antd';
+import {Redirect} from 'react-router-dom'
 import "antd/dist/antd.css";
 import Footing from './Footer.jsx';
 import './components.css'
@@ -11,7 +12,8 @@ class Add extends Component {
     this.state = {
       search: '',
       waste_items: [],
-      results: 'All Items'
+      results: 'All Items',
+      toDashboard: false
     };
   }
 
@@ -39,8 +41,11 @@ class Add extends Component {
   addWasteItem(waste_item_id){
     axios.post('api/v1/user_waste_items', { user_waste_item: { waste_item_id }})
         .then(items => {
-            console.log(items)
-            window.location.replace("/dashboard")
+            console.log(items);
+            this.setState({
+              toDashboard: true
+            })
+            // window.location.replace("/dashboard")
         })
         .catch(error => console.log(error))
   }
@@ -50,6 +55,10 @@ class Add extends Component {
   }
 
   render() {
+    if (this.state.toDashboard) {
+      return <Redirect to='/dashboard' />
+    }
+
   let filteredItems = this.state.waste_items.filter(
     (item) => {
       return item.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;

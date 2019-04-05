@@ -63,6 +63,28 @@ class Footer extends React.Component {
           id='footerIcon'
         />
         </Link>
+      <BottomNavigation value={value} onChange={this.handleChange} className={classes.root} id='footer' showLabels>
+
+        <Link to='/dashboard'>
+        <BottomNavigationAction icon={<HomeIcon id='footerIcon'/>} id='footerIcon'/>
+        <p className="footer-label">Dashboard</p>
+        </Link>
+
+        <Link to='/add'>
+        <BottomNavigationAction icon={<AddIcon />} id='footerIcon'/>
+        <p className="footer-label">Add</p>
+        </Link>
+
+        <Link to='/learn'>
+        <BottomNavigationAction icon={<LearnIcon />} id='footerIcon' />
+        <p className="footer-label">Learn</p>
+        </Link>
+
+        <Link to='/leaderboard'>
+        <BottomNavigationAction icon={<LeaderboardIcon />} id='footerIcon' />
+        <p className="footer-label">Leaderboard</p>
+        </Link>
+
       </BottomNavigation>
     );
   }

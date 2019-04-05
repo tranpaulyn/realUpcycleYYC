@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios'
 import "antd/dist/antd.css";
 import {Collapse, Icon} from 'antd';
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 import './components.css'
 import DeleteFroever from '@material-ui/icons/DeleteForever'
 
@@ -15,8 +15,8 @@ function callback(key){
 
 const genExtra = () => (
   <Link to='/add' className='linkcolorchange'>
-  <Icon type="plus" />
-      </Link>
+    <Icon type="plus" />
+  </Link>
 )
 
 class UserWasteList extends Component {
@@ -25,7 +25,8 @@ class UserWasteList extends Component {
         this.state = {
             users: [],
             userWasteItems: [],
-            wasteItems: []
+            wasteItems: [],
+            toDashboard: false
         }
     }
 
@@ -60,11 +61,12 @@ class UserWasteList extends Component {
         return str.charAt(0).toUpperCase() + str.slice(1);
       }
 
-    deleteWasteItem(id){
-        axios.delete('api/v1/user_waste_items/' + id)
+    deleteWasteItem(toDeleteId){
+        axios.delete('api/v1/user_waste_items/' + toDeleteId)
             .then(items => {
-                console.log(items)
-                window.location.replace("/dashboard")
+                this.setState(() => ({
+                    userWasteItems: this.state.userWasteItems.filter(({ id }) => id !== toDeleteId)
+                }))
             })
             .catch(error => console.log(error))
     }
@@ -110,7 +112,7 @@ class UserWasteList extends Component {
                         <td className="table-row-name">{wasteItem.waste_name}</td>
                         <td>{wasteItem.points}</td>
                         <td>{wasteItem.type}</td>
-                        <td> <button className="delete-btn"><DeleteFroever className="trash"/></button> </td>
+                        <td> <button className="delete-btn" onClick={() => this.deleteWasteItem(wasteItem.id)}><DeleteFroever className="trash"/></button> </td>
                     </tr>)
                     }
                   }
@@ -132,7 +134,7 @@ class UserWasteList extends Component {
                         <td className="table-row-name">{wasteItem.waste_name}</td>
                         <td>{wasteItem.points}</td>
                         <td>{wasteItem.type}</td>
-                        <td> <button className="delete-btn"><DeleteFroever className="trash"/></button> </td>
+                        <td> <button className="delete-btn" onClick={() => {this.deleteWasteItem(wasteItem.id)}}><DeleteFroever className="trash"/></button> </td>
                     </tr>)
                     }
                   }
