@@ -15,8 +15,8 @@ function callback(key){
 
 const genExtra = () => (
   <Link to='/add' className='linkcolorchange'>
-  <Icon type="plus" />
-      </Link>
+    <Icon type="plus" />
+  </Link>
 )
 
 class UserWasteList extends Component {

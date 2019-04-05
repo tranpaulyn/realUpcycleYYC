@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Progress } from 'antd';
 import './components.css';
 
@@ -33,9 +34,6 @@ class Signup extends Component {
         this.setState({progress: progress})
     }
 
-
-
-
   render() {
 
     return (
@@ -56,6 +54,7 @@ class Signup extends Component {
                     </div>
 
                     <div className="dd-wrapper">
+                    <center>
                         <select onChange={this.handleBlur} className='input-wrapper' type='ward' id='ward'>
                           <option value='chooseward' className="chooseward">Select Your City Ward</option>                         
                           <option value='ward'>Ward 1</option>
@@ -72,13 +71,18 @@ class Signup extends Component {
                           <option value='ward'>Ward 13</option>
                           <option value='ward'>Ward 14</option>
                         </select>
+                        </center>
+                        <center>
                         <p><br/><a target='_blank' rel='noopener noreferrer' href='http://www.calgary.ca/citycouncil/Pages/FindYourCouncillor.aspx'>Find your ward here</a></p>
+                        </center>
                     </div>
                     <div className='input-field'>
                     <p/><br/>
+                    <center>
                         <button type='submit' className="signup-pg-btn">Sign Up</button>
                         <p/>
-                        <p><a href="/">or Go Back</a></p>
+                        <p><Link to={'/'}>or Go Back</Link></p>
+                        </center>
                     </div>
                 </form>
                 </div>

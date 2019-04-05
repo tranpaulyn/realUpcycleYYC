@@ -77,10 +77,17 @@ class Dashboard extends Component {
             
             <div className="profile">
               <Avatar style={{ backgroundColor: '#66b9ea' }} size={150} icon="user" src={uniqueAvatar} alt="user-pic"/>
-            <br/>
-            <img className="badge-pic" src={imgUrl} height="50" width="50" alt="user-badge"/>
-            <p className="user-full-name">Hi, {user.name}!</p>
-            <p className="diversion-statement">You've diverted {user.waste_diverted} KGs. <br/> That's equivalent to {wasteDiverted} beaver(s)!</p>
+              <br/>
+              <img className="badge-pic" src={imgUrl} height="50" width="50" alt="user-badge"/>
+              <p className="user-full-name">
+                Hi, {user.name}!
+              </p>
+              <p className="diversion-statement">
+                You've diverted {user.waste_diverted} KGs. 
+              <br/> 
+                That's equivalent to {wasteDiverted} beaver(s)!
+              </p>
+              
               <div className="progress-bars">
 
                 <div className="column">
@@ -89,32 +96,19 @@ class Dashboard extends Component {
                 </div>
       
                 <div className="column">
-                <Progress strokeColor={'#41cd8c'} type="dashboard" percent={(user.points % 1000)/10}/>
+                  <Progress strokeColor={'#41cd8c'} type="dashboard" percent={(user.points % 1000)/10}/>
                 </div>
       
                 <div className="column">
-                <span className="neighbourhood-column">
-                  <p className="ranking-header">{(this.state.wards.findIndex(x => x.name == user.ward) + 1)} out of 14</p>
-                  <br/> 
-                  <p className="neighbourhood-meter">Ward {user.ward}</p>
-                  </span>
-                <p className="db-level">POINTS</p>
+                  <p className="db-level">POINTS</p>
                   <p className="user-points">{stringPoints}</p>
                 </div>
-              </div>
-              <Alert
-              className="award-alert"
-              message={awardMessage}
-              type="success"
-              closable=""
-              afterClose=""
-            />
-
-            <UserWasteList />
-            <Footing />
-
 
               </div>
+              <Alert className="award-alert" message={awardMessage} type="success"/>
+              <UserWasteList />
+              <Footing />
+            </div>
           )
           }
         }

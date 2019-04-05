@@ -117,8 +117,8 @@ h3{
 }
 
 .input-wrapper {
-    font-size: 1.75em;
-    padding: 0.5em;
+    font-size: 1.5rem;
+    padding: 0.5rem;
     font-weight: 100;
     border-bottom: 2px solid #41cd8c;
     border-top: none;
@@ -126,6 +126,9 @@ h3{
     border-right: none;
     background-color: transparent;
     color: grey;
+    margin-left: 0 auto !important;
+    margin-right: 0 auto !important;
+    width: 16.5rem;
 }
 
 .add-header {
@@ -213,10 +216,12 @@ h3{
     margin-top: auto;
     margin-bottom: auto;
     padding-bottom: 0.15em;
+    text-align: center;
 }
 
 .profile {
     margin-top: 6em;
+    text-align: center;
 }
 
 .user-full-name {
