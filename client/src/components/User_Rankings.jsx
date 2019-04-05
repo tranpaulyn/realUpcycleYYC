@@ -33,6 +33,7 @@ class Ranking extends Component {
         }
 
     render() {
+        
         return(
             <div className="testing">
             {this.state.users.map(user => {
@@ -42,9 +43,9 @@ class Ranking extends Component {
             <List itemLayout="horizontal" dataSource={this.state.users} renderItem={item => (
                 <List.Item>
                     <List.Item.Meta
-                        avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                        title={<a href="https://ant.design">user {item.name}</a>}
-                        description={<p>user {item.name} is in position {this.state.users.findIndex(x => x.name === item.name) + 1} out of 14 with {item.points} points.</p>}
+                        avatar={<Avatar src="https://thumbs.gfycat.com/EmptyAdoredDutchshepherddog-max-1mb.gif" />}
+                        title={<p>{item.name}</p>}
+                        description={<p>{item.name} is in position {this.state.users.findIndex(x => x.name === item.name) + 1} out of 42 with {item.points} points.</p>}
                     />
                 </List.Item>
             )}/>

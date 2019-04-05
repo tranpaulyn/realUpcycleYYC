@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import "antd/dist/antd.css";
-import {Avatar} from 'antd';
+import {Avatar, Button} from 'antd';
 import axios from 'axios'
 import Footing from './Footer.jsx'
 import Ranking from './Rankings.jsx'
@@ -12,7 +12,9 @@ class Leaderboard extends Component {
         this.state = {
             wards: [],
             users: [],
-            toggleButton: true
+            toggleButton: true,
+            text: 'User Ranking'
+
         }
         this.toggleButton = this.toggleButton.bind(this);
     }
@@ -39,7 +41,14 @@ class Leaderboard extends Component {
             this.setState({toggleButton: !this.state.toggleButton})
         }
 
+        // changeText(){
+        //     this.setState({text: !this.state.text });
+        // }
+        
+
+
     render() {
+
         return(
             <div className="leaderboard">
             <div className="logo-header">
@@ -58,8 +67,8 @@ class Leaderboard extends Component {
                                 <p className="leader-statement">
                                 Councillor George Cahal's Ward {this.state.wards[0].name} is leading the city!</p>
                                 <p>With {this.state.wards[0].points} points, they are #1 - 
-                                followed by Ward {this.state.wards[1].name} with {this.state.wards[1].points} 
-                                points.</p>
+                                followed by Ward {this.state.wards[1].name} with  {this.state.wards[1].points} 
+                                 points.</p>
                             </div>
                         )
                     } else if(ward.id === 1 && this.state.toggleButton === false) {
@@ -69,16 +78,17 @@ class Leaderboard extends Component {
                                 <br/>
                                 <p className="leader-statements">
                                 Hafiz is leading the users!</p>
-                                <p>With points, they are #1 - 
-                                followed by Ward  with
+                                <p>120000 With points, they are #1 - 
+                                followed by Kat with 90890
                                 points.</p>
+                                <p>{this.state.users[1]}</p>
                             </div>
                         )
                     }
                 })}
-            <button onClick={this.toggleButton}>Show ward Ranking
-            </button>
-            {(this.state.toggleButton === true) ?
+            <Button type='primary' onClick={this.toggleButton}>{this.state.toggleButton ? 'User Ranking' : 'Ward Ranking'}
+            </Button>
+            {(this.state.toggleButton) ?
             
                 <Ranking />
             :
