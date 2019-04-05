@@ -4,14 +4,17 @@ import {Avatar} from 'antd';
 import axios from 'axios'
 import Footing from './Footer.jsx'
 import Ranking from './Rankings.jsx'
+import UserRanking from './User_Rankings.jsx'
 
 class Leaderboard extends Component {
     constructor(props) {
         super(props)
         this.state = {
             wards: [],
-            users: []
+            users: [],
+            toggleButton: true
         }
+        this.toggleButton = this.toggleButton.bind(this);
     }
 
     componentDidMount() {
@@ -30,7 +33,11 @@ class Leaderboard extends Component {
                 })
             })
             .catch(error => console.log(error))
-    }
+        }
+
+        toggleButton(){
+            this.setState({toggleButton: !this.state.toggleButton})
+        }
 
     render() {
         return(
@@ -42,7 +49,8 @@ class Leaderboard extends Component {
                 <img className="hero" src="placeholder"/>
                 </div>
                 {this.state.wards.map(ward => {
-                    if (ward.id == 1) {
+
+                    if (ward.id === 1) {
                         return(
                             <div className="top-ward">
                                 <Avatar size={192} icon="user" src="http://www.calgary.ca/citycouncil/ward-5/PublishingImages/Ward-5-Chahal-HeadShot.jpg" alt="ward 5 councillor"/>
@@ -56,7 +64,15 @@ class Leaderboard extends Component {
                         )
                     }
                 })}
-            <Ranking />
+            <button onClick={this.toggleButton}>Show ward Ranking
+            </button>
+            {(this.state.toggleButton === true) ?
+            
+                <Ranking />
+            :
+                <UserRanking />
+    
+            }
             <Footing />
             </div>
 )}
