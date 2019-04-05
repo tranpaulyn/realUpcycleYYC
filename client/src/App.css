@@ -184,8 +184,7 @@ button.Garbage:hover{
 #footer{
   background-image: linear-gradient(to bottom right,#6d78e7, #66b9ea, #41cd8c);
   background-size: cover;
-  width:103%;
-  margin-left:-10px;
+  width: 100%;
   position: fixed;
   bottom: 0;
   display: flex;
@@ -200,8 +199,12 @@ button.Garbage:hover{
   color: white
 }
 
-#footerIcon.hover{
-  color:black
+
+.footer-label {
+  margin-top: -0.9em;
+  text-align: center;
+  font-size: 0.85em;
+  color: #fff;
 }
 
 .resourceLinks{
