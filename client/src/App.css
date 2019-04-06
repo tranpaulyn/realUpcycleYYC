@@ -281,4 +281,16 @@ button.Garbage:hover{
 
 .top-ward{
   margin-top: 6em;
+  margin: auto;
+  align-items: center;
+  width: 10%;
+  height: 392px;
+}
+
+.leader-statement{
+  justify-content: center;
+    margin: auto;
+    padding-left: 0px;
+    width: 500px;
+    height: 40px;
 }

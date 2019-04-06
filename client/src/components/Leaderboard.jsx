@@ -62,7 +62,7 @@ class Leaderboard extends Component {
                     if (ward.id === 1 && this.state.toggleButton === true) {
                         return(
                             <div className="top-ward">
-                                <Avatar size={192} icon="user" src="http://www.calgary.ca/citycouncil/ward-5/PublishingImages/Ward-5-Chahal-HeadShot.jpg" alt="ward 5 councillor"/>
+                                <Avatar className='userIcon' size={192} icon="user" src="http://www.calgary.ca/citycouncil/ward-5/PublishingImages/Ward-5-Chahal-HeadShot.jpg" alt="ward 5 councillor"/>
                                 <br/>
                                 <p className="leader-statement">
                                 Councillor George Cahal's Ward {this.state.wards[0].name} is leading the city!</p>
