@@ -64,9 +64,9 @@ class Dashboard extends Component {
             imgUrl = ("/tree.png")
           }
 
-          if (user.name === 'Connor'){
+          if (user.name === 'Hafiz'){
             let awardMessage = `Congratulations, you've earned ${user.award}!`
-            let uniqueAvatar = avatars[42 % 1];
+            let uniqueAvatar = avatars[42 % 2];
             console.log(user.waste_diverted);
             let wasteDiverted = (user.waste_diverted/24).toFixed(2);
 

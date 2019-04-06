@@ -29,40 +29,6 @@ class Footer extends React.Component {
     const { value } = this.state;
 
     return (
-      <BottomNavigation
-        value={value}
-        onChange={this.handleChange}
-        className={classes.root}
-        id='footer'
-        showLabels
-      >
-      <Link to='/dashboard'>
-        <BottomNavigationAction
-          label="Dashboard"
-          value="dashboard"
-          icon={<HomeIcon id='footerIcon'/>}
-          id='footerIcon'
-        /></Link>
-        <Link to='/add'>
-        <BottomNavigationAction label="Add" value="add" icon={<AddIcon />}
-          id='footerIcon'
-          /></Link>
-        <Link to='/learn' label='Learn' value='learn'>
-        <BottomNavigationAction
-          label="Learn"
-          value="learn"
-          icon={<LearnIcon />}
-          component={Link}
-          id='footerIcon'
-        /></Link>
-        <Link to='/leaderboard'>
-        <BottomNavigationAction
-          label="Leaderboard"
-          value="leaderboard"
-          icon={<LeaderboardIcon />}
-          id='footerIcon'
-        />
-        </Link>
       <BottomNavigation value={value} onChange={this.handleChange} className={classes.root} id='footer' showLabels>
 
         <Link to='/dashboard'>

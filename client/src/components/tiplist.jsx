@@ -6,6 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import BookIcon from '@material-ui/icons/ChromeReaderMode';
 import ArrowIcon from '@material-ui/icons/ChevronRight';
 import './components.css'
+import {Link} from 'react-router-dom'
 
 
 const styles = theme => ({
@@ -16,7 +17,6 @@ const styles = theme => ({
     },
   });
 
-import {Link} from 'react-router-dom'
 
 class TipList extends Component {
     render() {
