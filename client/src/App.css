@@ -186,14 +186,14 @@ button.Garbage:hover{
 }
 
 #footer{
-  background-image: linear-gradient(to bottom right,#41cd8c, #66b9ea, #6d78e7);
+  background-image: linear-gradient(to bottom right,#6d78e7, #66b9ea, #41cd8c);
   background-size: cover;
-  width:103%;
-  margin-left:-10px;
+  width: 100%;
   position: fixed;
   bottom: 0;
   display: flex;
   justify-content: space-around;
+  height: 5em;
 }
 
 .collapseBar{
@@ -204,6 +204,134 @@ button.Garbage:hover{
   color: white
 }
 
-#footerIcon.hover{
-  color:black
+
+.footer-label {
+  margin-top: -0.9em;
+  text-align: center;
+  font-size: 0.85em;
+  color: #fff;
+}
+
+.resourceLinks{
+  padding-top: 5em;
+  width: 80%;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  border-radius: 10px;
+  padding-top: 0px;
+  bottom: -15em;
+  margin: auto !important;
+  position: relative;
+  left: 0;
+  min-width: 385px;
+  bottom: -30px;
+}
+
+.dottedLine{
+  border-bottom: dashed 2px #eaebed
+
+}
+.bubble {
+	position: relative;
+	background: #FFFFCC;
+	border: 1px solid #FFCC00;
+    max-width:210px;
+    padding:10px;
+    font-family:arial;
+    margin:0 auto;
+    font-size:14px;
+    border-radius:6px;
+    top: 100px;
+    left: 89px;
+    font-size: 15px;
+    top: -41px;
+    
+    
+}
+.bubble:after,
+.bubble:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.bubble:after {
+	border-color: rgba(255, 255, 204, 0);
+	border-right-color: #FFFFCC;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.bubble:before {
+	border-color: rgba(255, 204, 0, 0);
+	border-right-color: #FFCC00;
+	border-width: 16px;
+	margin-top: -16px;
+}
+
+.resourcesTab{
+  margin: auto !important;
+}
+
+.earthImage{
+  width: 150px;
+  position: relative;
+  top: 6em;
+  right: 8em;
+}
+
+.top-ward{
+  margin-top: 6em;
+}
+
+.leader-statement{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.points-statement{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 19px;
+
+}
+
+#leaderIcon{
+  width: 192px;
+  height: 192px;
+  line-height: 192px;
+  font-size: 96px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: auto;
+}
+
+#toggleButton{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: auto;
+}
+
+.testing{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: auto;
+  padding-bottom: 62px;
+}
+
+.pointsText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 10px;
 }

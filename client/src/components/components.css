@@ -117,8 +117,8 @@ h3{
 }
 
 .input-wrapper {
-    font-size: 1.75em;
-    padding: 0.5em;
+    font-size: 1.5rem;
+    padding: 0.5rem;
     font-weight: 100;
     border-bottom: 2px solid #41cd8c;
     border-top: none;
@@ -126,6 +126,9 @@ h3{
     border-right: none;
     background-color: transparent;
     color: grey;
+    margin-left: 0 auto !important;
+    margin-right: 0 auto !important;
+    width: 16.5rem;
 }
 
 .add-header {
@@ -148,6 +151,7 @@ h3{
 
 .search-header{
     color: #fff;
+    text-align: center;
 }
 
 .search-input {
@@ -169,12 +173,14 @@ h3{
 }
 
 .lists-container {
-    padding-top: 15em;
-    margin: auto;
+    padding-top: 16em;
+    border-radius: 2em;
+    padding-bottom: 6em;
 }
 
 .item-name {
     text-align: left;
+    font-size: 1.25em;
 }
 
 .item-type {
@@ -186,13 +192,15 @@ h3{
 }
 
 .single-list {
-    border-bottom: 1px solid lightgrey;
-    width: 100%;
+    border-bottom: 2px dashed lightgrey;
+    /* width: 90%; */
+    margin: auto;
     padding: 2em 2em 1em 2em;
 }
 
 .container {
     padding-top: 2em;
+    padding-bottom: 6em;
 }
 
 .logo-header{
@@ -213,10 +221,12 @@ h3{
     margin-top: auto;
     margin-bottom: auto;
     padding-bottom: 0.15em;
+    text-align: center;
 }
 
 .profile {
     margin-top: 6em;
+    text-align: center;
 }
 
 .user-full-name {
@@ -298,4 +308,20 @@ h3{
 .delete-btn {
     border: none;
     background: none;
+}
+
+.pick-up-date {
+    font-size: 1.25em;
+    width: 80%;
+    margin: auto;
+}
+
+.resource-title {
+    margin: auto;
+    padding-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.resourcesTab {
+    padding-bottom: 10em !important;
 }

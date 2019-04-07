@@ -23,7 +23,7 @@ class Ranking extends Component {
             })
             .catch(error => console.log(error))
 
-        axios.get('api/vi/users')
+        axios.get('api/v1/users')
             .then(users => {
                 this.setState({
                     users: users.data
@@ -33,21 +33,19 @@ class Ranking extends Component {
         }
 
     render() {
+        
         return(
-            <div className="ranking">
-            {this.state.wards.map(ward => {
-                if(ward.name === 1) {
+            <div className="testing" >
+            {this.state.users.map(user => {
+                if(user.name === 'Connor') {
+                    console.log(user)
                     return(
-            <List
-            itemLayout="vertical"
-            bordered={true}
-            dataSource={this.state.wards}
-            renderItem={item => (
-                <List.Item>
+            <List itemLayout="horizontal" dataSource={this.state.users} renderItem={item => (
+                <List.Item className='longline'>
                     <List.Item.Meta
-                        avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                        title={<a href="https://ant.design">Ward {item.name}</a>}
-                        description={<p>Ward {item.name} is in position {this.state.wards.findIndex(x => x.name == item.name) + 1} out of 14 with {item.points} points.</p>}
+                        avatar={<Avatar src="https://thumbs.gfycat.com/EmptyAdoredDutchshepherddog-max-1mb.gif" />}
+                        title={<p>{item.name}</p>}
+                        description={<p>{item.name} is in position {this.state.users.findIndex(x => x.name === item.name) + 1} out of 42 with {item.points} points.</p>}
                     />
                 </List.Item>
             )}/>

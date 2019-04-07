@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import "antd/dist/antd.css";
-import {Avatar, Progress, Alert} from 'antd';
+import {Avatar, Progress, Alert, Button, Icon} from 'antd';
 import axios from 'axios'
 import UserWasteList from './UserWasteList.jsx';
 import Footing from './Footer.jsx';
@@ -66,7 +66,7 @@ class Dashboard extends Component {
 
           if (user.name === 'Connor'){
             let awardMessage = `Congratulations, you've earned ${user.award}!`
-            let uniqueAvatar = avatars[42 % 1];
+            let uniqueAvatar = avatars[42 % 2];
             console.log(user.waste_diverted);
             let wasteDiverted = (user.waste_diverted/24).toFixed(2);
 
@@ -77,10 +77,17 @@ class Dashboard extends Component {
             
             <div className="profile">
               <Avatar style={{ backgroundColor: '#66b9ea' }} size={150} icon="user" src={uniqueAvatar} alt="user-pic"/>
-            <br/>
-            <img className="badge-pic" src={imgUrl} height="50" width="50" alt="user-badge"/>
-            <p className="user-full-name">Hi, {user.name}!</p>
-            <p className="diversion-statement">You've diverted {user.waste_diverted} KGs. <br/> That's equivalent to {wasteDiverted} beaver(s)!</p>
+              <br/>
+              <img className="badge-pic" src={imgUrl} height="50" width="50" alt="user-badge"/>
+              <p className="user-full-name">
+                Hi, {user.name}!
+              </p>
+              <p className="diversion-statement">
+                You've diverted {user.waste_diverted} KGs. 
+              <br/> 
+                That's equivalent to {wasteDiverted} beaver(s)!
+              </p>
+              
               <div className="progress-bars">
 
                 <div className="column">
@@ -89,34 +96,45 @@ class Dashboard extends Component {
                 </div>
       
                 <div className="column">
-                <Progress strokeColor={'#41cd8c'} type="dashboard" percent={(user.points % 1000)/10}/>
+                  <Progress strokeColor={'#41cd8c'} type="dashboard" percent={(user.points % 1000)/10}/>
                 </div>
       
                 <div className="column">
-                <span className="neighbourhood-column">
-                  <p className="ranking-header">{(this.state.wards.findIndex(x => x.name == user.ward) + 1)} out of 14</p>
-                  <br/> 
-                  <p className="neighbourhood-meter">Ward {user.ward}</p>
-                  </span>
-                <p className="db-level">POINTS</p>
+                  <p className="db-level">POINTS</p>
                   <p className="user-points">{stringPoints}</p>
                 </div>
-              </div>
-              <Alert
-              className="award-alert"
-              message={awardMessage}
-              type="success"
-              closable=""
-              afterClose=""
-            />
-
-            <UserWasteList />
-            <Footing />
-
 
               </div>
-)
-                      }})}
+              <Alert className="award-alert" message={awardMessage} type="success"/>
+              <p><br/></p>
+              <Button.Group>
+                <Button value="large">
+                  <Icon type="left" />
+                  Last Week
+                </Button>
+                <Button value="large">
+                Week of April 7, 2019
+                </Button>
+                <Button value="large">
+                  Next Week
+                  <Icon type="right" />
+                </Button>
+              </Button.Group>
+              <div className="pick-up-date">
+              <p><br/><strong>Your Next Green and Blue Cart Pickup</strong>
+              <br/>April 12, 2019</p>
+              <p><strong>Black Cart Pickup</strong>
+              <br/>April 25, 2019</p>
+              </div>
+
+              <UserWasteList />
+              <Footing />
+            </div>
+          )
+          }
+        }
+        )
+        }
       </div>
     )
   }

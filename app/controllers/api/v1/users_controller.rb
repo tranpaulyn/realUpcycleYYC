@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
+    @users = User.all.order(points: :desc)
 
     user = []
 
@@ -14,6 +14,8 @@ class UsersController < ApplicationController
 
     render json: user
   end
+
+
 
   # GET /users/1
   def show
