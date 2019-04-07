@@ -41,12 +41,6 @@ class Leaderboard extends Component {
             this.setState({toggleButton: !this.state.toggleButton})
         }
 
-        // changeText(){
-        //     this.setState({text: !this.state.text });
-        // }
-        
-
-
     render() {
 
         return(
@@ -54,15 +48,12 @@ class Leaderboard extends Component {
             <div className="logo-header">
               <h1 className="reg-header">Upcycle</h1>
             </div>
-                <div className="hero-photo">
-                <img className="hero" src="placeholder"/>
-                </div>
                 {this.state.wards.map(ward => {
 
                     if (ward.id === 1 && this.state.toggleButton === true) {
                         return(
                             <div className="top-ward">
-                                <Avatar id='leaderIcon' size={192} icon="user" src="http://www.calgary.ca/citycouncil/ward-5/PublishingImages/Ward-5-Chahal-HeadShot.jpg" alt="ward 5 councillor"/>
+                                <Avatar id='leaderIcon' size={192} icon="user" src="/avatars/ward5.jpg" alt="ward 5 councillor"/>
                                 <br/>
                                 <p className="leader-statement">
                                 Councillor George Cahal's Ward {this.state.wards[0].name} is leading the city!</p>
