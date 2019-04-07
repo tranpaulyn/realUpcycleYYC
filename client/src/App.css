@@ -138,6 +138,8 @@ button.Garbage:hover{
 .dashboard {
   display: flex;
   flex-direction: column;
+  left: 0;
+  right: 0;
 }
 
 .badge-pic {
@@ -303,23 +305,23 @@ button.Garbage:hover{
   height: 192px;
   line-height: 192px;
   font-size: 96px;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
 }
 
 #toggleButton{
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
 }
 
 .testing{
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   padding-bottom: 62px;
 }
@@ -330,4 +332,35 @@ button.Garbage:hover{
   align-items: center;
   position: relative;
   bottom: 10px;
+}
+
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 60000ms linear 150ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+
+.lists-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.leaderboard {
+  margin: auto;
+  width: 100%;
 }
