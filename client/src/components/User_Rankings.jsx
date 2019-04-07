@@ -35,13 +35,13 @@ class Ranking extends Component {
     render() {
         
         return(
-            <div className="testing">
+            <div className="testing" >
             {this.state.users.map(user => {
                 if(user.name === 'Connor') {
                     console.log(user)
                     return(
             <List itemLayout="horizontal" dataSource={this.state.users} renderItem={item => (
-                <List.Item>
+                <List.Item className='longline'>
                     <List.Item.Meta
                         avatar={<Avatar src="https://thumbs.gfycat.com/EmptyAdoredDutchshepherddog-max-1mb.gif" />}
                         title={<p>{item.name}</p>}

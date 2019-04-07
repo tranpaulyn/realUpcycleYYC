@@ -62,39 +62,41 @@ class Leaderboard extends Component {
                     if (ward.id === 1 && this.state.toggleButton === true) {
                         return(
                             <div className="top-ward">
-                                <Avatar className='userIcon' size={192} icon="user" src="http://www.calgary.ca/citycouncil/ward-5/PublishingImages/Ward-5-Chahal-HeadShot.jpg" alt="ward 5 councillor"/>
+                                <Avatar id='leaderIcon' size={192} icon="user" src="http://www.calgary.ca/citycouncil/ward-5/PublishingImages/Ward-5-Chahal-HeadShot.jpg" alt="ward 5 councillor"/>
                                 <br/>
                                 <p className="leader-statement">
                                 Councillor George Cahal's Ward {this.state.wards[0].name} is leading the city!</p>
-                                <p>With {this.state.wards[0].points} points, they are #1 - 
-                                followed by Ward {this.state.wards[1].name} with  {this.state.wards[1].points} 
-                                 points.</p>
+                                <p className="points-statement">With {this.state.wards[0].points} points, they are #1 - 
+                                followed by Ward {this.state.wards[1].name} with
+                                 </p> <div className='pointsText'>{this.state.wards[1].points} points.</div>
                             </div>
                         )
                     } else if(ward.id === 1 && this.state.toggleButton === false) {
                         return(
                             <div className="top-ward">
-                                <Avatar size={192} icon="user" src="https://i.ytimg.com/vi/DVuUmTUYXrs/hqdefault.jpg" alt="squidward"/>
+                                <Avatar id="leaderIcon" size={192} icon="user" src="https://i.ytimg.com/vi/DVuUmTUYXrs/hqdefault.jpg" alt="squidward"/>
                                 <br/>
-                                <p className="leader-statements">
+                                <p className="leader-statement">
                                 Hafiz is leading the users!</p>
-                                <p>120000 With points, they are #1 - 
-                                followed by Kat with 90890
-                                points.</p>
+                                <p className="points-statement">120000 With points, they are #1 - 
+                                followed by </p><div className='pointsText'>Kat with 90890
+                                points.</div>
                                 <p>{this.state.users[1]}</p>
                             </div>
                         )
                     }
                 })}
-            <Button type='primary' onClick={this.toggleButton}>{this.state.toggleButton ? 'User Ranking' : 'Ward Ranking'}
+            <Button id="toggleButton" type='primary' onClick={this.toggleButton}>{this.state.toggleButton ? 'User Ranking' : 'Ward Ranking'}
             </Button>
             {(this.state.toggleButton) ?
             
                 <Ranking />
             :
                 <UserRanking />
+                
     
             }
+            
             <Footing />
             </div>
 )}
