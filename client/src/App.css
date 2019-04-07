@@ -181,6 +181,10 @@ button.Garbage:hover{
   color: grey
 }
 
+.top-ward {
+  margin-top: 6em;
+}
+
 #footer{
   background-image: linear-gradient(to bottom right,#41cd8c, #66b9ea, #6d78e7);
   background-size: cover;

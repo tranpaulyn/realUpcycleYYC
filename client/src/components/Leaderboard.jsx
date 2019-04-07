@@ -38,18 +38,15 @@ class Leaderboard extends Component {
             <div className="logo-header">
               <h1 className="reg-header">Upcycle</h1>
             </div>
-                <div className="hero-photo">
-                <img className="hero" src="placeholder"/>
-                </div>
                 {this.state.wards.map(ward => {
                     if (ward.id == 1) {
                         return(
                             <div className="top-ward">
                                 <Avatar size={192} icon="user" src="http://www.calgary.ca/citycouncil/ward-5/PublishingImages/Ward-5-Chahal-HeadShot.jpg" alt="ward 5 councillor"/>
                                 <br/>
-                                <p className="leader-statement">
+                                <p className="diversion-statement">
                                 Councillor George Cahal's Ward {this.state.wards[0].name} is leading the city!</p>
-                                <p>With {this.state.wards[0].points} points, they are #1 - 
+                                <p className="diversion-statement">With {this.state.wards[0].points} points, they are #1 - 
                                 followed by Ward {this.state.wards[1].name} with {this.state.wards[1].points} 
                                 points.</p>
                             </div>
