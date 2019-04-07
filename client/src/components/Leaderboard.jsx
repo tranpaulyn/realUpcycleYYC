@@ -55,7 +55,7 @@ class Leaderboard extends Component {
                             <div className="top-ward">
                                 <Avatar id='leaderIcon' size={192} icon="user" src="/avatars/ward5.jpg" alt="ward 5 councillor"/>
                                 <br/>
-                                <p className="diversion-statement">
+                                <p className="leader-statement">
                                 Councillor George Cahal's Ward {this.state.wards[0].name} is leading the city!</p>
                                 <p className="points-statement">With {this.state.wards[0].points} points, they are #1 - 
                                 followed by Ward {this.state.wards[1].name} with

@@ -34,13 +34,13 @@ class Ranking extends Component {
 
     render() {
         return(
-            <div className="ranking">
+            <div className="testing">
             {this.state.wards.map(ward => {
                 if(ward.name === 1) {
                     return(
             <List
-            itemLayout="vertical"
-            bordered={true}
+            itemLayout="horizontal"
+            bordered={false}
             dataSource={this.state.wards}
             renderItem={item => (
                 <List.Item>
