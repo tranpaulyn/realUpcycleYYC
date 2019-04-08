@@ -1,14 +1,11 @@
-
 .App {
   text-align: center;
 }
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -19,11 +16,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
-
 .signuplink {
   background: #50C878;
   border: 1px #679267 solid;
@@ -36,26 +31,21 @@
   outline: none;
   color: black;
 }
-
 .text-name, select, textarea{
   color: black;
 }
-
 .text-email, select, textarea{
   color: black;
 }
-
 .input-wrapper, select, textarea{
   color: black;
 }
-
 .signuplink:hover{
   border: 1px #C6C6C6 solid;
   box-shadow: 1px 1px 1px #EAEAEA;
   color: #333333;
   background: #F7F7F7;
 }
-
 button.Recycle{
   width: 100%;
   background-color: #cccccc;
@@ -67,11 +57,9 @@ button.Recycle{
   cursor: pointer;
   transition: background-color 0.2s linear;
 }
-
 button.Recycle:hover{
   background-color:#ddd;
 }
-
 .Recycle-content{
   padding: 0 20px;
   border-left: 1px solid #cccccc;
@@ -79,7 +67,6 @@ button.Recycle:hover{
   max-height: 0;
   overflow: hidden;
 }
-
 button.Compost{
   width: 100%;
   background-color: #cccccc;
@@ -91,7 +78,6 @@ button.Compost{
   cursor: pointer;
   transition: background-color 0.2s linear;
 }
-
 button.Compost:hover{
   background-color:#ddd;
 }
@@ -102,7 +88,6 @@ button.Compost:hover{
   max-height: 0;
   overflow: hidden;
 }
-
 button.Garbage{
   width: 100%;
   background-color: #cccccc;
@@ -114,11 +99,9 @@ button.Garbage{
   cursor: pointer;
   transition: background-color 0.2s linear;
 }
-
 button.Garbage:hover{
   background-color:#ddd;
 }
-
 .Garbage-content{
   padding: 0 20px;
   border-left: 1px solid #cccccc;
@@ -134,29 +117,24 @@ button.Garbage:hover{
     transform: rotate(360deg);
   }
 }
-
 .dashboard {
   display: flex;
   flex-direction: column;
   left: 0;
   right: 0;
 }
-
 .badge-pic {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-
 .diversion-statement {
   margin-bottom: 20px;
 }
-
 .progress-bars {
   display: flex;
   flex-flow: row wrap;
   width: 100%
 }
-
 .column {
   display: flex;
   justify-content: center;
@@ -164,29 +142,20 @@ button.Garbage:hover{
   flex-basis: 100%;
   flex: 1;
 }
-
 .moveTextLeft{
   float: left;
   padding-left: 3em
 }
-
 .moveTextRight{
   float: right;
   padding-right: 3em
 }
-
 .middleText{
   text-align: center;
 }
-
 .linkcolorchange{
   color: grey
 }
-
-.top-ward {
-  margin-top: 6em;
-}
-
 #footer{
   background-image: linear-gradient(to bottom right,#6d78e7, #66b9ea, #41cd8c);
   background-size: cover;
@@ -197,23 +166,18 @@ button.Garbage:hover{
   justify-content: space-around;
   height: 5em;
 }
-
 .collapseBar{
   padding-bottom: 5em;
 }
-
 #footerIcon{
   color: white
 }
-
-
 .footer-label {
   margin-top: -0.9em;
   text-align: center;
   font-size: 0.85em;
   color: #fff;
 }
-
 .resourceLinks{
   padding-top: 5em;
   width: 80%;
@@ -227,15 +191,13 @@ button.Garbage:hover{
   min-width: 385px;
   bottom: -30px;
 }
-
 .dottedLine{
   border-bottom: dashed 2px #eaebed
-
 }
 .bubble {
-	position: relative;
-	background: #FFFFCC;
-	border: 1px solid #FFCC00;
+    position: relative;
+    background: #FFFFCC;
+    border: 1px solid #FFCC00;
     max-width:210px;
     padding:10px;
     font-family:arial;
@@ -251,44 +213,39 @@ button.Garbage:hover{
 }
 .bubble:after,
 .bubble:before {
-	right: 100%;
-	top: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
 }
-
 .bubble:after {
-	border-color: rgba(255, 255, 204, 0);
-	border-right-color: #FFFFCC;
-	border-width: 15px;
-	margin-top: -15px;
+    border-color: rgba(255, 255, 204, 0);
+    border-right-color: #FFFFCC;
+    border-width: 15px;
+    margin-top: -15px;
 }
 .bubble:before {
-	border-color: rgba(255, 204, 0, 0);
-	border-right-color: #FFCC00;
-	border-width: 16px;
-	margin-top: -16px;
+    border-color: rgba(255, 204, 0, 0);
+    border-right-color: #FFCC00;
+    border-width: 16px;
+    margin-top: -16px;
 }
-
 .resourcesTab{
   margin: auto !important;
 }
-
 .earthImage{
   width: 150px;
   position: relative;
   top: 6em;
   right: 8em;
 }
-
 .top-ward{
   margin-top: 6em;
 }
-
 .leader-statement{
   display: flex;
   justify-content: center;
@@ -298,16 +255,13 @@ button.Garbage:hover{
   margin: auto;
   text-align: center;
 }
-
 .points-statement{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 25px;
   margin-right: 19px;
-
 }
-
 #leaderIcon{
   width: 192px;
   height: 192px;
@@ -318,14 +272,12 @@ button.Garbage:hover{
   align-items: center;
   margin: auto;
 }
-
 #toggleButton{
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
 }
-
 .testing{
   display: flex;
   justify-content: center;
@@ -333,7 +285,6 @@ button.Garbage:hover{
   margin: auto;
   padding-bottom: 62px;
 }
-
 .pointsText{
   display: flex;
   justify-content: center;
@@ -341,7 +292,6 @@ button.Garbage:hover{
   position: relative;
   bottom: 10px;
 }
-
 .fade-appear,
 .fade-enter {
     opacity: 0;
@@ -352,22 +302,18 @@ button.Garbage:hover{
     opacity: 1;
     transition: opacity 60000ms linear 150ms;
 }
-
 .fade-exit {
     opacity: 1;
 }
-
 .fade-exit.fade-exit-active {
     opacity: 0;
     transition: opacity 300ms linear;
 }
-
 .lists-container {
   position: absolute;
   left: 0;
   right: 0;
 }
-
 .leaderboard {
   margin: auto;
   width: 100%;
@@ -388,6 +334,13 @@ button.Garbage:hover{
   margin: auto;
   text-align: center;
 }
+
+#quizContainer{
+  border: 3px solid whitesmoke;
+  box-shadow: 2px 2px 2px #EAEAEA;
+
+}
+
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .column-lead {
@@ -412,3 +365,4 @@ button.Garbage:hover{
   }
 
   }
+

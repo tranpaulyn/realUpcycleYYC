@@ -1,35 +1,27 @@
 var quizQuestions = [
   {
-      question: "How much waste does the average Calgarian produce?",
+      question: "The average Calgarian produces more than 300kg of waste per year.",
       answers: [
           {
-              type: "Intermediate",
-              content: "268kg"
+              type: "False",
+              content: "False"
           },
           {
-              type: "Expert",
-              content: "368kg"
-          },
-          {
-              type: "Beginner",
-              content: "168kg"
+              type: "True",
+              content: "True"
           }
       ]
   },
   {
-      question: "How would you recycle a usable drinking glass?",
+      question: "Household glasses can be recycled.",
       answers: [
           {
-              type: "Intermediate",
-              content: "Wrap and label it before placing it in your black bin"
+              type: "True",
+              content: "False: Glass used for these types of household items is different than food jars and is not recyclable"
           },
           {
-              type: "Expert",
-              content: "Glass used for these types of household items is different than food jars and is not recyclable"
-          },
-          {
-              type: "Beginner",
-              content: "Wrap and label it before placing it in your blue bin"
+              type: "False",
+              content: "True: Take it to the bottle depot"
           }
       ]
   },
@@ -37,16 +29,12 @@ var quizQuestions = [
       question: "What bin would you dispose of cannabis?",
       answers: [
           {
-              type: "Intermediate",
-              content: "Put it in your blue bin"
+              type: "False",
+              content: "True: Put it in your blue bin"
           },
           {
-              type: "Expert",
-              content: "Put in your green bin"
-          },
-          {
-              type: "Beginner",
-              content: "Put it in your black bin"
+              type: "True",
+              content: "False: Put in your green bin"
           }
       ]
   },
@@ -54,16 +42,12 @@ var quizQuestions = [
       question: "How many trees can be saved by recycling 1 ton of cardboard?",
       answers: [
           {
-              type: "Intermediate",
-              content: "12 trees"
+              type: "False",
+              content: "True: 12 trees"
           },
           {
-              type: "Expert",
-              content: "17 trees"
-          },
-          {
-              type: "Beginner",
-              content: "6 trees"
+              type: "True",
+              content: "False: 17 trees"
           }
       ]
   },
@@ -71,16 +55,12 @@ var quizQuestions = [
       question: "How should you dispose of chocolate or candy?",
       answers: [
           {
-              type: "Intermediate",
-              content: "Remove all wrappers, place candy in green bin and wrappers in black bin"
+              type: "False",
+              content: "False: Remove all wrappers, place candy in green bin and wrappers in black bin"
           },
           {
-              type: "Expert",
-              content: "Eat the chocolate and candy, then place wrappers in black bin."
-          },
-          {
-              type: "Beginner",
-              content: "Throw it in the black bin"
+              type: "True",
+              content: "True: Eat the chocolate and candy, then place wrappers in black bin."
           }
       ]
   }

@@ -21,6 +21,7 @@ function Quiz(props) {
 
   return (
     <CSSTransition
+      id="quizContainer"
       className="container"
       component="div"
       transitionName="fade"
