@@ -45,6 +45,7 @@ class Add extends Component {
             this.setState({
               toDashboard: true
             })
+            // window.location.replace("/dashboard")
         })
         .catch(error => console.log(error))
   }

@@ -61,41 +61,31 @@ class UserWasteList extends Component {
         return str.charAt(0).toUpperCase() + str.slice(1);
       }
 
-  deleteWasteItem(toDeleteId){
-    axios.delete('api/v1/user_waste_items/' + toDeleteId)
-      .then(items => {
-        axios.get('api/v1/users')
-        .then(users => {
-            this.setState({
-                users: users.data
+    deleteWasteItem(toDeleteId){
+        axios.delete('api/v1/user_waste_items/' + toDeleteId)
+            .then(items => {
+                this.setState(() => ({
+                    userWasteItems: this.state.userWasteItems.filter(({ id }) => id !== toDeleteId)
+                }))
             })
-        })
+            .catch(error => console.log(error))
+    }
 
-        axios.get('api/v1/user_waste_items')
-        .then(items => {
-            this.setState({
-                userWasteItems: items.data
-            })
-        })
-
-      })
-    .catch(error => console.log(error))
-  }
-
-  render() {
-    return(
-      <div className='container'>
-        <Collapse defaultActiveKey={['1']} onChange={callback}>
-        <Panel header="Recycle" key='1' extra={genExtra()}>
-        <table className="item-table">
-          <tr>
-            <th className="table-row-title">Item</th>
-            <th>Points</th>
-            <th>Type</th>
-            <th>Remove</th>
-            </tr>
-            {this.state.userWasteItems.map(wasteItem => {
-              if(wasteItem.recyclable){
+    render() {
+        return(
+          <div className='container'>
+            <Collapse defaultActiveKey={['1']} onChange={callback}>
+            <Panel header="Recycle" key='1' extra={genExtra()}>
+              <table className="item-table">
+                  <tr>
+                      <th className="table-row-title">Item</th>
+                      <th>Points</th>
+                      <th>Type</th>
+                      <th>Remove</th>
+                  </tr>
+                {this.state.userWasteItems.map(wasteItem => {
+                    console.log(wasteItem.id)
+                  if(wasteItem.recyclable){
                     return (<tr className="row-table">
                         <td className="table-row-name">{this.capitalize(wasteItem.waste_name)}</td>
                         <td>{wasteItem.points}</td>
