@@ -17,9 +17,10 @@ class App extends Component {
     return (
 
       <Router>
-        <Route render={({location}) => (
+      
          
-<Switch location={location}>
+<Switch>
+
   <Route exact path="/" component={Home} />
   <Route exact path="/signup" component={Signup} />
   <Route exact path="/add" component={Add} />
@@ -31,7 +32,6 @@ class App extends Component {
   <Route component={NotFound} />
 </Switch>
 
-        )} />
 </Router>
 
     );

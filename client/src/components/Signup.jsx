@@ -40,8 +40,8 @@ class Signup extends Component {
       <div className="SignUpPg">
         <Progress strokeColor={{'0%': '#66b9ea', '100%': '#41cd8c',}} percent={this.state.progress} type="line" strokeWidth="20px" status="active" size="large"/>
         <div className="form">
-          <h2>Hi!</h2>
-          <h3>Let's get started:</h3>
+          <h2><center>Hi!</center></h2>
+          <h3><center>Let's get started:</center></h3>
           <div>
                 <div className='container'>
                 <form className='white' action='/dashboard' method='get'>

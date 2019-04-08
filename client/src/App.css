@@ -250,6 +250,10 @@ button.Garbage:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.5em;
+  width: 95%;
+  margin: auto;
+  text-align: center;
 }
 .points-statement{
   display: flex;
@@ -314,12 +318,30 @@ button.Garbage:hover{
   margin: auto;
   width: 100%;
 }
+
+.lead-points {
+  float: right !important;
+  padding-left: 1.5em;
+}
+
+.lead-details {
+  padding-top: 1em;
+  font-size: 1.5em;
+}
+
+.column-lead {
+  width: 33%;
+  margin: auto;
+  text-align: center;
+}
+
 #quizContainer{
   border: 3px solid whitesmoke;
   box-shadow: 2px 2px 2px #EAEAEA;
 
 }
 
+<<<<<<< HEAD
 #quizHeader {
   color: red;
   float: left;
@@ -329,3 +351,30 @@ button.Garbage:hover{
 .questionCount {
   float: right;
 }
+=======
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .column-lead {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .testing{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 62px;
+  }
+
+  .lead-details {
+    padding-top: 1em;
+    font-size: 1.25em;
+    width: 15em;
+  }
+
+  }
+
+>>>>>>> f66f03aa169270c578f726431acfcf87bc9fabb0
