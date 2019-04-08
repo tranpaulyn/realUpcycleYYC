@@ -50,24 +50,26 @@ class Leaderboard extends Component {
           if (ward.id === 1 && this.state.toggleButton === true) {
             return(
               <div className="top-ward">
-                <Avatar id='leaderIcon' size={192} icon="user" src="/avatars/ward5.jpg" alt="ward 5 councillor"/>
+                <Avatar id='leaderIcon' style={{ backgroundColor: '#66b9ea' }} size={150} icon="user" src="/avatars/50-1.png" alt="ward 5 councillor"/>
                 <br/>
                 <p className="leader-statement">
-                Councillor George Cahal's Ward {this.state.wards[0].name} is leading the city!</p>
-                <p className="points-statement">With {this.state.wards[0].points} points, they are #1 - 
-                followed by Ward {this.state.wards[1].name} with
-                </p> <div className='pointsText'>{this.state.wards[1].points} points.</div>
+                Councillor George Cahal's Ward {this.state.wards[0].name} leads the city!</p>
+                <div className="column-lead">
+                  <p className="db-level">YOUR WARD: 1</p>
+                  <p className="user-level">#5 out of 14</p>
+                </div>
               </div>
             )
           } else if(ward.id === 1 && this.state.toggleButton === false) {
             return(
               <div className="top-ward">
-                <Avatar id="leaderIcon" size={192} icon="user" src="https://i.ytimg.com/vi/DVuUmTUYXrs/hqdefault.jpg" alt="squidward"/>
+                <center><Avatar style={{ backgroundColor: '#66b9ea' }} size={150} icon="user" src='/avatars/1.png' alt="user-pic"/></center>
                 <br/>
-                <p className="leader-statement"> Hafiz is leading the users!</p>
-                <p className="points-statement">120000 With points, they are #1 - followed by </p>
-                <div className='pointsText'>Kat with 90890 points.</div>
-                  <p>{this.state.users[1]}</p>
+                <p className="leader-statement"> The TOP Player is Hafiz!</p>
+                <div className="column-lead">
+                  <p className="db-level">YOUR RANK</p>
+                  <p className="user-level">#12 out of 42</p>
+                </div>
                 </div>
             )
           }

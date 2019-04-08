@@ -293,6 +293,7 @@ button.Garbage:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.5em;
 }
 
 .points-statement{
@@ -367,4 +368,20 @@ button.Garbage:hover{
 .leaderboard {
   margin: auto;
   width: 100%;
+}
+
+.lead-points {
+  float: right !important;
+  padding-left: 1.5em;
+}
+
+.lead-details {
+  padding-top: 1em;
+  font-size: 1.5em;
+}
+
+.column-lead {
+  width: 33%;
+  margin: auto;
+  text-align: center;
 }
