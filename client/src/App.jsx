@@ -17,7 +17,10 @@ class App extends Component {
     return (
 
       <Router>
+      
+         
 <Switch>
+
   <Route exact path="/" component={Home} />
   <Route exact path="/signup" component={Signup} />
   <Route exact path="/add" component={Add} />
@@ -28,6 +31,7 @@ class App extends Component {
   <Route exact path="/quiz" component={Quiz} />
   <Route component={NotFound} />
 </Switch>
+
 </Router>
 
     );
