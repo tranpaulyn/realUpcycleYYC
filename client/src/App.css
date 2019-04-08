@@ -319,3 +319,13 @@ button.Garbage:hover{
   box-shadow: 2px 2px 2px #EAEAEA;
 
 }
+
+#quizHeader {
+  color: red;
+  float: left;
+  margin-right: 60px;
+}
+
+.questionCount {
+  float: right;
+}
