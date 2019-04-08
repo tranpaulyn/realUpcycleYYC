@@ -1,9 +1,24 @@
 import React, {Component} from 'react';
 import "antd/dist/antd.css";
-import {Avatar, Progress, Alert, Button, Icon} from 'antd';
+import {Avatar, Progress, Alert, Button, Icon, Collapse} from 'antd';
 import axios from 'axios'
-import UserWasteList from './UserWasteList.jsx';
+// import UserWasteList from './UserWasteList.jsx';
 import Footing from './Footer.jsx';
+import {Link} from 'react-router-dom'
+import './components.css'
+import DeleteFroever from '@material-ui/icons/DeleteForever'
+
+const Panel = Collapse.Panel
+
+function callback(key){
+  console.log(key);
+}
+
+const genExtra = () => (
+  <Link to='/add' className='linkcolorchange'>
+    <Icon type="plus" />
+  </Link>
+)
 
 class Dashboard extends Component {
     constructor(props) {
@@ -12,7 +27,8 @@ class Dashboard extends Component {
           users: [],
           userWasteItems: [],
           wasteItems: [],
-          wards: []
+          wards: [],
+          toDashboard: false
       }
   }
   componentDidMount() {
@@ -32,17 +48,48 @@ class Dashboard extends Component {
       console.log(wards.data)
     })
     .catch(error => console.log(error))
+
+    axios.get('api/v1/user_waste_items')
+        .then(items => {
+            this.setState({
+                userWasteItems: items.data
+            })
+        })
+        .catch(error => console.log(error))
+
+        axios.get('api/v1/waste_items')
+        .then(items => {
+          console.log(items.data)
+            this.setState({
+                wasteItems: items.data
+            })
+        })
+        .catch(error => console.log(error))
   }
 
-  render() {
+  capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
 
-    let avatars = ['/avatars/1.png', '/avatars/2.png', '/avatars/3.png', '/avatars/4.png', '/avatars/5.png',
-    '/avatars/6.png', '/avatars/7.png', '/avatars/8.png', '/avatars/9.png', '/avatars/10.png', '/avatars/11.png', '/avatars/12.png',
-    '/avatars/13.png', '/avatars/14.png', '/avatars/15.png', '/avatars/16.png', '/avatars/17.png', '/avatars/18.png', '/avatars/19.png', '/avatars/20.png',
-    '/avatars/21.png', '/avatars/22.png', '/avatars/23.png', '/avatars/24.png', '/avatars/25.png', '/avatars/26.png', '/avatars/27.png', '/avatars/28.png',
-    '/avatars/29.png', '/avatars/30.png', '/avatars/31.png', '/avatars/32.png', '/avatars/33.png', '/avatars/34.png', '/avatars/35.png',
-    '/avatars/36.png', '/avatars/37.png', '/avatars/38.png', '/avatars/39.png', '/avatars/40.png', '/avatars/41.png',
-    '/avatars/42.png']
+deleteWasteItem(toDeleteId){
+axios.delete('api/v1/user_waste_items/' + toDeleteId)
+  .then(items => {
+    axios.get('api/v1/user_waste_items')
+    .then(items => {
+        this.setState({
+            userWasteItems: items.data
+        })
+    })
+    axios.get('api/v1/users')
+    .then(users => {
+        this.setState({
+            users: users.data
+        })
+    })
+  })
+}
+
+  render() {
 
     return(
       
@@ -66,8 +113,6 @@ class Dashboard extends Component {
 
           if (user.name === 'Connor'){
             let awardMessage = `Congratulations, you've earned ${user.award}!`
-            let uniqueAvatar = avatars[42 % 2];
-            console.log(user.waste_diverted);
             let wasteDiverted = (user.waste_diverted/24).toFixed(2);
 
             let points = user.points;
@@ -76,7 +121,7 @@ class Dashboard extends Component {
           return (
             
             <div className="profile">
-              <Avatar style={{ backgroundColor: '#66b9ea' }} size={150} icon="user" src={uniqueAvatar} alt="user-pic"/>
+              <Avatar style={{ backgroundColor: '#66b9ea' }} size={150} icon="user" src='/avatars/1.png' alt="user-pic"/>
               <br/>
               <img className="badge-pic" src={imgUrl} height="50" width="50" alt="user-badge"/>
               <p className="user-full-name">
@@ -127,7 +172,77 @@ class Dashboard extends Component {
               <br/>April 25, 2019</p>
               </div>
 
-              <UserWasteList />
+ <div className='container'>
+        <Collapse defaultActiveKey={['1']} onChange={callback}>
+        <Panel header="Recycle" key='1' extra={genExtra()}>
+        <table className="item-table">
+          <tr>
+            <th className="table-row-title">Item</th>
+            <th>Points</th>
+            <th>Type</th>
+            <th>Remove</th>
+            </tr>
+            {this.state.userWasteItems.map(wasteItem => {
+                    console.log(wasteItem.id)
+                  if(wasteItem.recyclable){
+                    return (<tr className="row-table">
+                        <td className="table-row-name">{this.capitalize(wasteItem.waste_name)}</td>
+                        <td>{wasteItem.points}</td>
+                        <td>{this.capitalize(wasteItem.type)}</td>
+                        <td> <button className="delete-btn" onClick={() => this.deleteWasteItem(wasteItem.id)}><DeleteFroever className="trash"/></button> </td>
+                    </tr>)
+                    }
+                  }
+                )}
+                </table>
+            </Panel>
+
+            <Panel header="Compost" key='2' extra={genExtra()}>
+            <table className="item-table">
+                  <tr>
+                      <th className="table-row-title">Item</th>
+                      <th>Points</th>
+                      <th>Type</th>
+                      <th>Remove</th>
+                  </tr>
+                {this.state.userWasteItems.map(wasteItem => {
+                  if(wasteItem.compostable){
+                    return (<tr className="row-table">
+                        <td className="table-row-name">{wasteItem.waste_name}</td>
+                        <td>{wasteItem.points}</td>
+                        <td>{wasteItem.type}</td>
+                        <td> <button className="delete-btn" onClick={() => this.deleteWasteItem(wasteItem.id)}><DeleteFroever className="trash"/></button> </td>
+                    </tr>)
+                    }
+                  }
+                )}
+                </table>
+            </Panel>
+
+            <Panel header="Garbage" key='3' extra={genExtra()}>
+            <table className="item-table">
+                  <tr>
+                      <th className="table-row-title">Item</th>
+                      <th>Points</th>
+                      <th>Type</th>
+                      <th>Remove</th>
+                  </tr>
+                {this.state.userWasteItems.map(wasteItem => {
+                  if(wasteItem.garbage === true && wasteItem.compostable === false && wasteItem.recyclable === false){
+                    return (<tr className="row-table">
+                        <td className="table-row-name">{wasteItem.waste_name}</td>
+                        <td>{wasteItem.points}</td>
+                        <td>{wasteItem.type}</td>
+                        <td> <button className="delete-btn" onClick={() => {this.deleteWasteItem(wasteItem.id)}}><DeleteFroever className="trash"/></button> </td>
+                    </tr>)
+                    }
+                  }
+                )}
+                </table>
+            </Panel>
+          </Collapse>
+        </div>
+              
               <Footing />
             </div>
           )
