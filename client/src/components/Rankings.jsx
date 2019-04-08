@@ -38,7 +38,11 @@ class Ranking extends Component {
             {this.state.wards.map(ward => {
                 if(ward.name === 1) {
                     return(
-            <List itemLayout="horizontal" dataSource={this.state.wards} renderItem={item => (
+            <List
+            itemLayout="horizontal"
+            bordered={false}
+            dataSource={this.state.wards}
+            renderItem={item => (
                 <List.Item>
                     <List.Item.Meta
                         avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}

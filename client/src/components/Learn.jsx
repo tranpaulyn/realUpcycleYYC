@@ -14,7 +14,7 @@ class Home extends Component {
         <img src='/planet-earth.png' alt='earthImage' className='earthImage'></img>
       
         <div className='bubble'>
-          Fuel your recycling habits with the latest science and hand-picked by the carp team
+         Tip of the day: Remember to clean out your glass before recycling
         </div>
         
         <div className='resourcesTab'>

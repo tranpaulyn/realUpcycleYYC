@@ -75,7 +75,7 @@ class Dashboard extends Component {
                 Hi, {user.name}!
               </p>
               <p className="diversion-statement">
-                You've diverted {user.waste_diverted} KGs. 
+                You've diverted {user.waste_diverted} KGs of waste from the landfill! 
               <br/> 
                 That's equivalent to {wasteDiverted} beaver(s)!
               </p>
