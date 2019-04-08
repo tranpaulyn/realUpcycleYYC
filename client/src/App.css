@@ -294,6 +294,9 @@ button.Garbage:hover{
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
+  width: 95%;
+  margin: auto;
+  text-align: center;
 }
 
 .points-statement{
@@ -385,3 +388,27 @@ button.Garbage:hover{
   margin: auto;
   text-align: center;
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .column-lead {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .testing{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 62px;
+  }
+
+  .lead-details {
+    padding-top: 1em;
+    font-size: 1.25em;
+    width: 15em;
+  }
+
+  }
