@@ -11,7 +11,6 @@ import Leaderboard from './components/Leaderboard.jsx';
 import Quiz from './QuizApp';
 import NotFound from './NotFound'
 import './components/components.css'
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 class App extends Component {
   render() {
@@ -19,12 +18,7 @@ class App extends Component {
 
       <Router>
         <Route render={({location}) => (
-          <TransitionGroup>
-            <CSSTransition
-              key={location.key}
-              timeout={300}
-              classNames="fade"
-              >
+         
 <Switch location={location}>
   <Route exact path="/" component={Home} />
   <Route exact path="/signup" component={Signup} />
@@ -36,8 +30,7 @@ class App extends Component {
   <Route exact path="/quiz" component={Quiz} />
   <Route component={NotFound} />
 </Switch>
-</CSSTransition>
-          </TransitionGroup>
+
         )} />
 </Router>
 

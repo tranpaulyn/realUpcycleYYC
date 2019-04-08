@@ -103,8 +103,9 @@ class QuizApp extends Component {
     if (result.length === 1) {
       this.setState({ result: result[0] });
     } else {
-      this.setState({ result: 'Intermediate' });
+      this.setState({ result: 'Beginner' });
     }
+    console.log(this.setState({result: result[0]}))
   }
 
   renderQuiz() {
@@ -121,7 +122,8 @@ class QuizApp extends Component {
   }
 
   renderResult() {
-    return <Result quizResult={this.state.result} />;
+
+    return <Result quizResult={this.state.result} />;  
   }
 
   render() {
@@ -130,6 +132,7 @@ class QuizApp extends Component {
             <div className="logo-header">
               <h1 className="reg-header">Upcycle</h1>
         </div>
+        
         {this.state.result ? this.renderResult() : this.renderQuiz()}
         <Footing />
       </div>
