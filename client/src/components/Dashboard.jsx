@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import "antd/dist/antd.css";
 import {Avatar, Progress, Alert, Button, Icon, Collapse} from 'antd';
 import axios from 'axios'
-// import UserWasteList from './UserWasteList.jsx';
 import Footing from './Footer.jsx';
 import {Link} from 'react-router-dom'
 import './components.css'
@@ -121,7 +120,7 @@ axios.delete('api/v1/user_waste_items/' + toDeleteId)
           return (
             
             <div className="profile">
-              <Avatar style={{ backgroundColor: '#66b9ea' }} size={150} icon="user" src='/avatars/1.png' alt="user-pic"/>
+              <Avatar style={{ backgroundColor: '#66b9ea' }} size={150} icon="user" src='/avatars/12.png' alt="user-pic"/>
               <br/>
               <img className="badge-pic" src={imgUrl} height="50" width="50" alt="user-badge"/>
               <p className="user-full-name">

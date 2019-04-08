@@ -16,6 +16,7 @@ class Ranking extends Component {
   componentDidMount() {
     axios.get('api/v1/wards')
       .then(wards => {
+          console.log(wards.data)
         this.setState({
           wards: wards.data
         })
@@ -45,9 +46,9 @@ class Ranking extends Component {
               renderItem={item => (
                 <List.Item>
                   <List.Item.Meta
-                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                    title={<a href="https://ant.design">Ward {item.name}</a>}
-                    description={<p>Ward {item.name} is in position {this.state.wards.findIndex(x => x.name === item.name) + 1} out of 14 with {item.points} points.</p>}
+                    avatar={<Avatar size={80} src={`/leaderboard/${this.state.wards.findIndex(x => x.name === item.name) + 1}.png`} />}
+                    title={<h4 className="lead-details"><strong>Ward {item.name}</strong> <span className="lead-points"> {item.points.toLocaleString()} points </span></h4>}
+                    description={<p>Waste Diverted: {item.total_weight} KGs</p>}
                   />
                 </List.Item>
               )}/>

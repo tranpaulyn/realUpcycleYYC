@@ -43,9 +43,9 @@ class Ranking extends Component {
             <List itemLayout="horizontal" dataSource={this.state.users} renderItem={item => (
                 <List.Item className='longline'>
                     <List.Item.Meta
-                        avatar={<Avatar src="https://thumbs.gfycat.com/EmptyAdoredDutchshepherddog-max-1mb.gif" />}
-                        title={<p>{item.name}</p>}
-                        description={<p>{item.name} is in position {this.state.users.findIndex(x => x.name === item.name) + 1} out of 42 with {item.points} points.</p>}
+                        avatar={<Avatar style={{ backgroundColor: '#6d78e7' }} size={80} src={`/avatars/${this.state.users.findIndex(x => x.name === item.name) + 1}.png`} />}
+                        title={<h4 className="lead-details"><strong>#{this.state.users.findIndex(x => x.name === item.name) + 1} {item.name}</strong> <span className="lead-points"> {item.points.toLocaleString()} points </span></h4>}
+                        description={<p>Waste Diverted: {item.waste_diverted} KGs</p>}
                     />
                 </List.Item>
             )}/>
