@@ -36,14 +36,6 @@ class Dashboard extends Component {
 
   render() {
 
-    let avatars = ['/avatars/1.png', '/avatars/2.png', '/avatars/3.png', '/avatars/4.png', '/avatars/5.png',
-    '/avatars/6.png', '/avatars/7.png', '/avatars/8.png', '/avatars/9.png', '/avatars/10.png', '/avatars/11.png', '/avatars/12.png',
-    '/avatars/13.png', '/avatars/14.png', '/avatars/15.png', '/avatars/16.png', '/avatars/17.png', '/avatars/18.png', '/avatars/19.png', '/avatars/20.png',
-    '/avatars/21.png', '/avatars/22.png', '/avatars/23.png', '/avatars/24.png', '/avatars/25.png', '/avatars/26.png', '/avatars/27.png', '/avatars/28.png',
-    '/avatars/29.png', '/avatars/30.png', '/avatars/31.png', '/avatars/32.png', '/avatars/33.png', '/avatars/34.png', '/avatars/35.png',
-    '/avatars/36.png', '/avatars/37.png', '/avatars/38.png', '/avatars/39.png', '/avatars/40.png', '/avatars/41.png',
-    '/avatars/42.png']
-
     return(
       
       <div className="dashboard">
@@ -64,9 +56,9 @@ class Dashboard extends Component {
             imgUrl = ("/tree.png")
           }
 
-          if (user.name === 'Hafiz'){
+          if (user.name === 'Connor'){
             let awardMessage = `Congratulations, you've earned ${user.award}!`
-            let uniqueAvatar = avatars[42 % 2];
+
             console.log(user.waste_diverted);
             let wasteDiverted = (user.waste_diverted/24).toFixed(2);
 
@@ -76,7 +68,7 @@ class Dashboard extends Component {
           return (
             
             <div className="profile">
-              <Avatar style={{ backgroundColor: '#66b9ea' }} size={150} icon="user" src={uniqueAvatar} alt="user-pic"/>
+              <Avatar style={{ backgroundColor: '#66b9ea' }} size={150} icon="user" src='/avatars/1.png' alt="user-pic"/>
               <br/>
               <img className="badge-pic" src={imgUrl} height="50" width="50" alt="user-badge"/>
               <p className="user-full-name">
@@ -126,7 +118,6 @@ class Dashboard extends Component {
               <p><strong>Black Cart Pickup</strong>
               <br/>April 25, 2019</p>
               </div>
-
               <UserWasteList />
               <Footing />
             </div>
