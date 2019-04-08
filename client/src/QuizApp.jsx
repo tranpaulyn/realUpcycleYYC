@@ -17,9 +17,8 @@ class QuizApp extends Component {
       answerOptions: [],
       answer: '',
       answersCount: {
-        Expert: 0,
-        Intermediate: 0,
-        Beginner: 0
+        True: 0,
+        False: 0
       },
       result: ''
     };
@@ -100,12 +99,21 @@ class QuizApp extends Component {
   }
 
   setResults(result) {
-    if (result.length === 1) {
+    const answersCount = this.state.answersCount;
+    const answersCountKeys = Object.keys(answersCount);
+    const answersCountValues = answersCountKeys.map(key => answersCount[key]);
+    const maxAnswerCount = Math.max.apply(null, answersCountValues);
+
+    if (result.length === 1 && maxAnswerCount === 0 && maxAnswerCount <= 2) {
       this.setState({ result: result[0] });
-    } else {
-      this.setState({ result: 'Beginner' });
+      this.setState({result: answersCount.True + '/5'})
+    } else if(maxAnswerCount >= 3 && maxAnswerCount <= 4){
+      this.setState({result: answersCount.True + '/5'})
+
+    } else{
+      this.setState({result: answersCount.True + '/5'})
+
     }
-    console.log(this.setState({result: result[0]}))
   }
 
   renderQuiz() {
@@ -122,8 +130,7 @@ class QuizApp extends Component {
   }
 
   renderResult() {
-
-    return <Result quizResult={this.state.result} />;  
+    return <Result quizResult={this.state.result} />;
   }
 
   render() {
@@ -132,7 +139,6 @@ class QuizApp extends Component {
             <div className="logo-header">
               <h1 className="reg-header">Upcycle</h1>
         </div>
-        
         {this.state.result ? this.renderResult() : this.renderQuiz()}
         <Footing />
       </div>

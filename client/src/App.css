@@ -314,3 +314,8 @@ button.Garbage:hover{
   margin: auto;
   width: 100%;
 }
+#quizContainer{
+  border: 3px solid whitesmoke;
+  box-shadow: 2px 2px 2px #EAEAEA;
+
+}

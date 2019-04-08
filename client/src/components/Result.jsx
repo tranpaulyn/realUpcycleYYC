@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 
 function Result(props) {
+  const giphy = props.quizResult;
+  if(giphy === 'Expert'){
+    return 
+  }
   return (
     <CSSTransition
       className="container result"
@@ -14,7 +18,7 @@ function Result(props) {
       transitionAppearTimeout={500}
     >
       <div className="quiz-result">
-      <strong>{props.quizResult}</strong> recycler!
+      Final Score: <strong>{props.quizResult}</strong> <img src='https://media.giphy.com/media/HaC3m9r4JFjPi/giphy.gif'></img>
       </div>
     </CSSTransition>
   );
