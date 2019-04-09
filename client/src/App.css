@@ -341,7 +341,6 @@ button.Garbage:hover{
 
 }
 
-<<<<<<< HEAD
 #quizHeader {
   color: red;
   float: left;
@@ -351,7 +350,6 @@ button.Garbage:hover{
 .questionCount {
   float: right;
 }
-=======
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .column-lead {
@@ -377,4 +375,3 @@ button.Garbage:hover{
 
   }
 
->>>>>>> f66f03aa169270c578f726431acfcf87bc9fabb0
