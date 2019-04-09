@@ -265,7 +265,8 @@ h3{
 }
 
 .progress-bars {
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 
 .column {
@@ -332,6 +333,10 @@ h3{
         float: right;
         font-size: 1em
     }
+
+    .progress-bars {
+        width: 100% !important;
+    }
     
 }
 
@@ -370,6 +375,10 @@ h3{
 .item-type {
     float: right;
     font-size: 1em
+}
+
+.progress-bars {
+    width: 100% !important;
 }
 
 }

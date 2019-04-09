@@ -369,11 +369,22 @@ button.Garbage:hover{
   color: #6d78e7;
 }
 
+.waste-container {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 10rem;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .column-lead {
     width: 80%;
     margin: auto;
     text-align: center;
+  }
+
+  .waste-container {
+    width: 100%;
+    margin-bottom: 5rem;
   }
 
   .testing{
