@@ -226,7 +226,7 @@ class User < ApplicationRecord
     elsif self.level >= 10 && self.level <= 24
       '10% Off Transit Pass'
     elsif self.level >= 25 && self.level <= 49
-      '$5 Off $50 or more at Co-Op'
+      '$5 Off $50 or more at Co-op'
     elsif self.level >= 50 && self.level <= 99
       '20% Off Transit Pass'
     else 
