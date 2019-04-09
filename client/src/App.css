@@ -1,11 +1,14 @@
 .App {
   text-align: center;
+  width: 100%;
 }
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -16,9 +19,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .App-link {
   color: #61dafb;
 }
+
 .signuplink {
   background: #50C878;
   border: 1px #679267 solid;
@@ -31,6 +36,7 @@
   outline: none;
   color: black;
 }
+
 .text-name, select, textarea{
   color: black;
 }
@@ -188,12 +194,13 @@ button.Garbage:hover{
   margin: auto !important;
   position: relative;
   left: 0;
-  min-width: 385px;
   bottom: -30px;
 }
+
 .dottedLine{
   border-bottom: dashed 2px #eaebed
 }
+
 .bubble {
     position: relative;
     background: #FFFFCC;
@@ -207,10 +214,9 @@ button.Garbage:hover{
     top: 100px;
     left: 89px;
     font-size: 15px;
-    top: -41px;
-    
-    
+    top: -41px; 
 }
+
 .bubble:after,
 .bubble:before {
     right: 100%;
@@ -236,6 +242,7 @@ button.Garbage:hover{
 }
 .resourcesTab{
   margin: auto !important;
+  padding-bottom: 10rem;
 }
 .earthImage{
   width: 150px;
@@ -373,5 +380,62 @@ button.Garbage:hover{
     width: 15em;
   }
 
+  .earthImage{
+    width: 30%;
+    position: relative;
+    top: 6em;
+    right: 8em;
   }
+
+  .bubble {
+    background: #FFFFCC;
+    border: 1px solid #FFCC00;
+    border-radius: 0.5rem;
+    margin-left: 5rem;
+    font-size: 15px;
+    margin-top: 2rem;
+  }
+
+  .resourcesTab{
+    margin: auto !important;
+    margin-bottom: 8rem !important;
+  }
+
+  .resourceLinks{
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    border-radius: 10px;
+  }
+
+}
+
+@media only screen and (max-device-width : 320px) {
+  .earthImage{
+    width: 30%;
+    position: relative;
+    top: 6em;
+    right: 8em;
+  }
+
+  .bubble {
+    background: #FFFFCC;
+    border: 1px solid #FFCC00;
+    border-radius: 0.5rem;
+    margin-left: 2rem;
+    font-size: 15px;
+    margin-top: 2rem;
+    padding-right: 1rem;
+  }
+
+  .resourcesTab{
+    margin: auto !important;
+    margin-bottom: 8rem !important;
+  }
+
+  .resourceLinks{
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    border-radius: 10px;
+  }
+}
 

@@ -318,16 +318,6 @@ h3{
     margin: auto;
 }
 
-.resource-title {
-    margin: auto;
-    padding-bottom: 0.5em;
-    font-weight: 600;
-}
-
-.resourcesTab {
-    padding-bottom: 10em !important;
-}
-
 @media only screen and (min-device-width : 420px) and (max-device-width : 600px) {
     .ant-btn-group {
         font-size: 1.25rem;
