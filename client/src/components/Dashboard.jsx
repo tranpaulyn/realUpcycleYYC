@@ -172,7 +172,7 @@ axios.delete('api/v1/user_waste_items/' + toDeleteId)
               </div>
 
  <div className='container'>
-        <Collapse defaultActiveKey={['1']} onChange={callback}>
+        <Collapse defaultActiveKey={['1', '2', '3']} onChange={callback}>
         <Panel header="Recycle" key='1' extra={genExtra()}>
         <table className="item-table">
           <tr>
