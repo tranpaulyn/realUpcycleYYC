@@ -242,7 +242,7 @@ button.Garbage:hover{
 }
 .resourcesTab{
   margin: auto !important;
-  padding-bottom: 10rem;
+  margin-bottom: 10rem;
 }
 .earthImage{
   width: 150px;
@@ -380,6 +380,10 @@ button.Garbage:hover{
     width: 15em;
   }
 
+  .lead-points {
+    margin-right: 1rem;
+  }
+
   .earthImage{
     width: 30%;
     position: relative;
@@ -437,5 +441,6 @@ button.Garbage:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
     border-radius: 10px;
   }
+
 }
 
