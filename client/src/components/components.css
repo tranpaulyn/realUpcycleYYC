@@ -257,6 +257,7 @@ h3{
     font-size: 1.5em;
     margin-top: -0.5em;
 }
+
 .award-alert {
     font-size: 1.25em !important;
     font-weight: 600 !important;
@@ -317,12 +318,80 @@ h3{
     margin: auto;
 }
 
-.resource-title {
-    margin: auto;
-    padding-bottom: 0.5em;
-    font-weight: 600;
+@media only screen and (min-device-width : 420px) and (max-device-width : 600px) {
+    .ant-btn-group {
+        font-size: 1.25rem;
+    }
+
+    .item-name {
+        text-align: left;
+        font-size: 1em;
+    }
+    
+    .item-type {
+        float: right;
+        font-size: 1em
+    }
+    
 }
 
-.resourcesTab {
-    padding-bottom: 10em !important;
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 419px) {
+
+.diversion-statement {
+    font-size: 1.15em;
+    margin: -1em 0.5em 1em 0.5em;
+}
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 3em;
+}
+
+.ant-btn-group {
+    display: none !important;
+}
+
+.pick-up-date {
+    font-size: 1.15em;
+    width: 100%;
+    margin: auto;
+    margin-top: -1.75rem;
+}
+
+.item-name {
+    text-align: left;
+    font-size: 1em;
+}
+
+.item-type {
+    float: right;
+    font-size: 1em
+}
+
+}
+
+@media only screen and (max-device-width: 320px) {
+    .ant-btn-group {
+        display: none !important;
+    }
+
+    .db-level {
+        font-size: 1.5em;
+        border-bottom: 3px solid #41cd8c;
+        margin-left: 1em;
+        margin-right: 0.5em;
+        padding-top: 0.75em;
+        font-weight: 600;
+    }
+
+    .user-points {
+        font-size: 1.5em;
+        margin-top: -0.5em;
+        margin-left: 0.5em;
+    }
+
 }
