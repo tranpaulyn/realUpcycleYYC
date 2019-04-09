@@ -332,6 +332,17 @@ h3{
     .ant-btn-group {
         font-size: 1.25rem;
     }
+
+    .item-name {
+        text-align: left;
+        font-size: 1em;
+    }
+    
+    .item-type {
+        float: right;
+        font-size: 1em
+    }
+    
 }
 
 
@@ -361,6 +372,16 @@ h3{
     margin-top: -1.75rem;
 }
 
+.item-name {
+    text-align: left;
+    font-size: 1em;
+}
+
+.item-type {
+    float: right;
+    font-size: 1em
+}
+
 }
 
 @media only screen and (max-device-width: 320px) {
@@ -382,4 +403,5 @@ h3{
         margin-top: -0.5em;
         margin-left: 0.5em;
     }
+
 }
