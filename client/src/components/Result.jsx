@@ -18,7 +18,8 @@ function Result(props) {
       transitionAppearTimeout={500}
     >
       <div className="quiz-result">
-      Final Score: <strong>{props.quizResult}</strong> <img src='https://media.giphy.com/media/HaC3m9r4JFjPi/giphy.gif'></img>
+      <p className="quizResult">Your Result: {props.quizResult}</p> 
+      <center><img class="Jake" src='https://media.giphy.com/media/HaC3m9r4JFjPi/giphy.gif' /></center>
       </div>
     </CSSTransition>
   );
