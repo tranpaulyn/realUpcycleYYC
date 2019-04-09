@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 function QuestionCount(props) {
   return (
     <div className="questionCount">
-    <h2 id="quizHeader">Test Your Knowledge!</h2>
-    <span>{props.counter}</span> / <span>{props.total}</span>
+    <p><span id="q-count">0{props.counter}</span> / 0{props.total}</p>
     </div>
   );
 }

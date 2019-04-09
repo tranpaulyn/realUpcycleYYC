@@ -207,7 +207,6 @@ button.Garbage:hover{
     border: 1px solid #FFCC00;
     max-width:210px;
     padding:10px;
-    font-family:arial;
     margin:0 auto;
     font-size:14px;
     border-radius:6px;
@@ -342,20 +341,32 @@ button.Garbage:hover{
   text-align: center;
 }
 
-#quizContainer{
-  border: 3px solid whitesmoke;
-  box-shadow: 2px 2px 2px #EAEAEA;
-
+#quizHeader {
+  text-align: center;
+  margin: auto;
 }
 
-#quizHeader {
-  color: red;
-  float: left;
-  margin-right: 60px;
+.Jake {
+  margin-left: -3rem;
+}
+
+.quizResult{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-top: 1rem;
 }
 
 .questionCount {
-  float: right;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.25rem !important;
+  font-weight: 600;
+}
+
+#q-count {
+  color: #6d78e7;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
