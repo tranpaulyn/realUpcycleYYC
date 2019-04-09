@@ -207,9 +207,9 @@ axios.delete('api/v1/user_waste_items/' + toDeleteId)
                 {this.state.userWasteItems.map(wasteItem => {
                   if(wasteItem.compostable){
                     return (<tr className="row-table">
-                        <td className="table-row-name">{wasteItem.waste_name}</td>
+                        <td className="table-row-name">{this.capitalize(wasteItem.waste_name)}</td>
                         <td>{wasteItem.points}</td>
-                        <td>{wasteItem.type}</td>
+                        <td>{this.capitalize(wasteItem.type)}</td>
                         <td> <button className="delete-btn" onClick={() => this.deleteWasteItem(wasteItem.id)}><DeleteFroever className="trash"/></button> </td>
                     </tr>)
                     }
@@ -229,9 +229,9 @@ axios.delete('api/v1/user_waste_items/' + toDeleteId)
                 {this.state.userWasteItems.map(wasteItem => {
                   if(wasteItem.garbage === true && wasteItem.compostable === false && wasteItem.recyclable === false){
                     return (<tr className="row-table">
-                        <td className="table-row-name">{wasteItem.waste_name}</td>
+                        <td className="table-row-name">{this.capitalize(wasteItem.type)}</td>
                         <td>{wasteItem.points}</td>
-                        <td>{wasteItem.type}</td>
+                        <td>{this.capitalize(wasteItem.type)}</td>
                         <td> <button className="delete-btn" onClick={() => {this.deleteWasteItem(wasteItem.id)}}><DeleteFroever className="trash"/></button> </td>
                     </tr>)
                     }

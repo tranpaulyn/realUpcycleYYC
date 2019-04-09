@@ -375,6 +375,11 @@ button.Garbage:hover{
   padding-bottom: 10rem;
 }
 
+.sign-upcontainer {
+  width: 90%;
+  margin: auto;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .column-lead {
     width: 80%;
@@ -431,6 +436,12 @@ button.Garbage:hover{
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
     border-radius: 10px;
+  }
+
+  .waste-container {
+    width: 100%;
+    margin: auto;
+    padding-bottom: 5rem;
   }
 
 }

@@ -43,7 +43,7 @@ class Signup extends Component {
           <h2><center>Hi!</center></h2>
           <h3><center>Let's get started:</center></h3>
           <div>
-                <div className='container'>
+                <div className='sign-upcontainer'>
                 <form className='white' action='/dashboard' method='get'>
                     <div className="input-name">
                         <input placeholder="First and Last Name" className='text-name' type='name' onBlur={this.handleBlur} id='name' onChange={this.handleChange}></input>
