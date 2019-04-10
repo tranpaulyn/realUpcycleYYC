@@ -30,11 +30,11 @@ var quizQuestions = [
       answers: [
           {
               type: "False",
-              content: "True: Put it in your blue bin"
+              content: "Blue bin"
           },
           {
               type: "True",
-              content: "False: Put in your green bin"
+              content: "Green Bin"
           }
       ]
   },
@@ -43,11 +43,11 @@ var quizQuestions = [
       answers: [
           {
               type: "False",
-              content: "True: 12 trees"
+              content: "12 trees"
           },
           {
               type: "True",
-              content: "False: 17 trees"
+              content: "17 trees"
           }
       ]
   },
@@ -55,12 +55,12 @@ var quizQuestions = [
       question: "How should you dispose of chocolate or candy?",
       answers: [
           {
-              type: "False",
-              content: "False: Remove all wrappers, place candy in green bin and wrappers in black bin"
+              type: "True",
+              content: "Remove all wrappers, place candy in green bin and wrappers in black bin"
           },
           {
               type: "True",
-              content: "True: Eat the chocolate and candy, then place wrappers in black bin."
+              content: "Eat the chocolate and candy, then place wrappers in black bin."
           }
       ]
   }
