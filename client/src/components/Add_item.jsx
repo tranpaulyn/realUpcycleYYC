@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Button, Input } from 'antd';
+import { Button, Input, Alert } from 'antd';
 import {Redirect} from 'react-router-dom'
 import "antd/dist/antd.css";
 import Footing from './Footer.jsx';

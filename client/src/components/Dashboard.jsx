@@ -227,7 +227,7 @@ axios.delete('api/v1/user_waste_items/' + toDeleteId)
                       <th>Remove</th>
                   </tr>
                 {this.state.userWasteItems.map(wasteItem => {
-                  if(wasteItem.garbage === true && wasteItem.compostable === false && wasteItem.recyclable === false){
+                  if(wasteItem.garbage){
                     return (<tr className="row-table">
                         <td className="table-row-name">{this.capitalize(wasteItem.name)}</td>
                         <td>{wasteItem.points}</td>

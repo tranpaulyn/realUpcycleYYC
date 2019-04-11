@@ -61,6 +61,7 @@ class Signup extends Component {
                           <option value='ward'>Ward 2</option>
                           <option value='ward'>Ward 3</option>
                           <option value='ward'>Ward 4</option>
+                          <option value='ward'>Ward 5</option>
                           <option value='ward'>Ward 6</option>
                           <option value='ward'>Ward 7</option>
                           <option value='ward'>Ward 8</option>
