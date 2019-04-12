@@ -49,7 +49,19 @@ A ranking system was created that populates on the Upcycle Leaderboard Page. Thi
 
 ### Final Product
 
+!["Home Login/Signup Page"](https://github.com/tranpaulyn/realUpcycleYYC/blob/master/Screenshots/home.png)
 
+!["Sign-Up"](https://github.com/tranpaulyn/realUpcycleYYC/blob/master/Screenshots/sign-up.png)
+
+!["Dashboard"](https://github.com/tranpaulyn/realUpcycleYYC/blob/master/Screenshots/dashboard.png)
+
+!["Add Waste Item"](https://github.com/tranpaulyn/realUpcycleYYC/blob/master/Screenshots/add-item.png)
+
+!["Learn & Resources Page"](https://github.com/tranpaulyn/realUpcycleYYC/blob/master/Screenshots/resources.png)
+
+!["User Leaderboard"](https://github.com/tranpaulyn/realUpcycleYYC/blob/master/Screenshots/user-leaderboard.png)
+
+!["Ward Leaderboard"]("https://github.com/tranpaulyn/realUpcycleYYC/blob/master/Screenshots/ward-leaderboard.png")
 
 ### Collaborative Authoring (A-Z)
 
