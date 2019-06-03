@@ -55,7 +55,9 @@ A ranking system was created that populates on the Upcycle Leaderboard Page. Thi
 
 !["User Leaderboard"](https://github.com/tranpaulyn/realUpcycleYYC/blob/master/Screenshots/user-leaderboard.png)
 
-### Collaborative Authoring (A-Z)
+!["Live Link"](https://afternoon-tor-83860.herokuapp.com/)
+
+## Collaborative Authoring (A-Z)
 
 [Arslan Ahmed](https://github.com/arslanah99)
 
